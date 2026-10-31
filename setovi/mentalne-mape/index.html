@@ -25,12 +25,13 @@
     <link href="/content-pages.css" rel="stylesheet" />
     <link href="/product-photos.css" rel="stylesheet" />
     <script defer="" src="/app.js"></script>
+    <script defer="" src="/inquiry-form.js"></script>
     <link href="/gallery.css" rel="stylesheet" />
     <script defer="" src="/gallery.js"></script>
     <link href="/legal.css" rel="stylesheet" />
     <script defer="" src="/legal.js"></script>
   </head>
-  <body class="detail-page" data-initial-product="mape">
+  <body class="detail-page">
     <a class="skip" href="#sadrzaj">Preskoči na sadržaj</a>
     <svg aria-hidden="true" class="icon-defs" xmlns="http://www.w3.org/2000/svg">
       <symbol id="arrow" viewbox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"></path></symbol>
@@ -369,48 +370,12 @@
             >
             <p class="location">Virovitica, Hrvatska</p>
           </div>
-          <form class="inquiry" id="inquiry-form">
-            <h3>Kupi Mozgić</h3>
-            <label for="product-choice">Što vas zanima?</label
-            ><select id="product-choice" name="proizvod">
-              <option value="komplet">Mozgićev komplet — 89,90 €</option>
-              <option value="planiranje">Planiranje učenja — 29,90 €</option>
-              <option value="citanje">Aktivno čitanje — 29,90 €</option>
-              <option value="mape">Mentalne mape — 29,90 €</option>
-              <option value="kartice">Aktivno prisjećanje — 29,90 €</option>
-              <option value="pomoc">Trebam pomoć pri odabiru</option></select
-            ><label for="inquiry-message"
-              >Što biste još željeli pitati? <span>(neobvezno)</span></label
-            ><textarea
-              id="inquiry-message"
-              maxlength="2000"
-              name="poruka"
-              placeholder="Ovdje možete dodati svoje pitanje…"
-              rows="3"
-            ></textarea>
-            <div class="inquiry-summary">
-              <span id="summary-label">Komplet · 4 seta i 4 vodiča</span
-              ><strong id="summary-price">89,90 €</strong>
-            </div>
-            <p class="shipping-note">Trošak dostave potvrđuje se u ponudi.</p>
-            <p class="form-legal-note">
-              Slanje upita ne obvezuje vas na kupnju. Pročitajte
-              <a href="/pravni-kutak/uvjeti-kupnje/">uvjete kupnje</a> i
-              <a href="/pravni-kutak/privatnost/">politiku privatnosti</a>.
-            </p>
-            <button class="button" type="submit">
-              Naruči putem e-pošte <svg aria-hidden="true"><use href="#arrow"></use></svg>
-            </button>
+          <mozgic-upit initial-product="mape">
             <p class="form-note">
-              Otvara se vaša aplikacija za e-poštu. Poruku prije slanja možete pregledati i
-              dopuniti.
+              Za slanje upita potreban je JavaScript. Upit možete poslati i izravno na
+              <a href="mailto:mirela.vlasic@gmail.com">mirela.vlasic@gmail.com</a>.
             </p>
-            <p class="mail-status" hidden="" id="mail-status" role="status">
-              Upit je pripremljen. Ako se aplikacija nije otvorila,
-              <button id="copy-inquiry" type="button">kopirajte upit</button> i pošaljite ga na
-              mirela.vlasic@gmail.com.
-            </p>
-          </form>
+          </mozgic-upit>
         </div>
       </section>
     </main>
@@ -437,23 +402,19 @@
         ><a href="/pravni-kutak/kolacici/">Kolačići</a>
       </nav>
     </footer>
-    <a hidden="" id="prepared-mail" rel="noopener noreferrer" target="_blank"
-      >Pripremljeni upit e-poštom</a
-    >
     <dialog aria-labelledby="privacy-title" id="privacy-dialog">
       <button aria-label="Zatvori informacije o privatnosti" class="close-dialog">×</button>
       <p class="eyebrow">VAŠ UPIT</p>
       <h2 id="privacy-title">O privatnosti</h2>
       <p>
-        Odabir seta i tekst upita obrađuju se u vašem pregledniku. Ovaj obrazac nema vlastitu
-        pohranu upita i ne šalje ga automatski.
+        Podatke koje upišete u obrazac (ime i prezime, e-adresa, odabrani proizvod i poruka) šaljemo
+        putem vanjskog servisa za obradu obrazaca isključivo radi odgovora na vaš upit.
       </p>
       <p>
-        Gumb „Sastavi upit e-poštom” priprema poruku u vašoj aplikaciji za e-poštu. Tek kada je sami
-        pošaljete, sadržaj poruke i vaša adresa e-pošte dostavljaju se primateljici Mireli Vlašić
-        Fištrović na mirela.vlasic@gmail.com radi odgovora na upit.
+        Podaci se ne koriste u druge svrhe i ne prosljeđuju trećima, osim navedenom servisu koji
+        tehnički omogućuje dostavu poruke. Za početni upit nije potrebno slati djetetovo ime, školu
+        ili osjetljive podatke.
       </p>
-      <p>Za početni upit nije potrebno slati djetetovo ime, školu ili osjetljive podatke.</p>
       <a class="text-link" href="mailto:mirela.vlasic@gmail.com"
         >Kontakt za pitanja o podacima <span>↗</span></a
       >

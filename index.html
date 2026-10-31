@@ -19,6 +19,7 @@
   <link href="/legal.css" rel="stylesheet"/>
 
   <script defer="" src="/app.js"></script>
+  <script defer="" src="/inquiry-form.js"></script>
   <script defer="" src="/gallery.js"></script>
   <script defer="" src="/legal.js"></script>
 </head>
@@ -418,52 +419,13 @@
           <p class="location">Virovitica, Hrvatska</p>
         </div>
 
-        <!-- Obrazac šalje upit preko Formspreea (vidi app.js: FORM_ENDPOINT) -->
-        <form class="inquiry" id="inquiry-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <h3>Kupi Mozgić</h3>
-
-          <span class="ms-label" id="product-choice-label">Što vas zanima? <span>(možete odabrati više)</span></span>
-          <div class="multiselect" id="product-choice">
-            <button type="button" class="multiselect-toggle" id="ms-toggle" aria-haspopup="true" aria-expanded="false" aria-labelledby="product-choice-label ms-value">
-              <span class="ms-value is-placeholder" id="ms-value">Odaberite proizvode</span>
-              <span class="ms-caret" aria-hidden="true">▾</span>
-            </button>
-            <div class="multiselect-panel" id="ms-panel" role="group" aria-labelledby="product-choice-label" hidden>
-              <label class="ms-option"><input type="checkbox" name="proizvod" value="komplet"/> <span>Mozgićev komplet — 89,90 €</span></label>
-              <label class="ms-option"><input type="checkbox" name="proizvod" value="planiranje"/> <span>Planiranje učenja — 29,90 €</span></label>
-              <label class="ms-option"><input type="checkbox" name="proizvod" value="citanje"/> <span>Aktivno čitanje — 29,90 €</span></label>
-              <label class="ms-option"><input type="checkbox" name="proizvod" value="mape"/> <span>Mentalne mape — 29,90 €</span></label>
-              <label class="ms-option"><input type="checkbox" name="proizvod" value="kartice"/> <span>Aktivno prisjećanje — 29,90 €</span></label>
-              <label class="ms-option"><input type="checkbox" name="proizvod" value="pomoc"/> <span>Trebam pomoć pri odabiru</span></label>
-            </div>
-          </div>
-
-          <label for="full-name">Ime i prezime</label>
-          <input type="text" id="full-name" name="ime" autocomplete="name" required/>
-
-          <label for="email">E-adresa</label>
-          <input type="email" id="email" name="email" autocomplete="email" required/>
-
-          <label for="inquiry-message">Što biste još željeli pitati? <span>(neobvezno)</span></label>
-          <textarea id="inquiry-message" maxlength="2000" name="poruka" placeholder="Ovdje možete dodati svoje pitanje…" rows="3"></textarea>
-
-          <div class="inquiry-summary">
-            <span id="summary-label">Odaberite jedan ili više proizvoda</span>
-            <strong id="summary-price">—</strong>
-          </div>
-          <p class="shipping-note">Trošak dostave potvrđuje se u ponudi.</p>
-
-          <!-- Anti-spam honeypot: skriveno od ljudi; ako ga bot ispuni, Formspree odbacuje poruku -->
-          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none"/>
-          <!-- Naslov e-maila koji ćete primiti -->
-          <input type="hidden" name="_subject" value="Novi upit s web stranice — Mozgić"/>
-
-          <p class="form-legal-note">Slanje upita ne obvezuje vas na kupnju. Pročitajte <a href="/pravni-kutak/uvjeti-kupnje/">uvjete kupnje</a> i <a href="/pravni-kutak/privatnost/">politiku privatnosti</a>.</p>
-
-          <button class="button" type="submit">Pošalji upit <svg aria-hidden="true"><use href="#arrow"></use></svg></button>
-
-          <p class="mail-status" id="form-status" role="status" hidden=""></p>
-        </form>
+        <!-- Obrazac za upit: komponenta iz /inquiry-form.js (slanje preko Formspreea) -->
+        <mozgic-upit>
+          <p class="form-note">
+              Za slanje upita potreban je JavaScript. Upit možete poslati i izravno na
+              <a href="mailto:mirela.vlasic@gmail.com">mirela.vlasic@gmail.com</a>.
+            </p>
+        </mozgic-upit>
       </div>
     </section>
 

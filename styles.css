@@ -869,6 +869,11 @@ em {
   font-size: 10.6px !important;
   margin-top: 17px;
 }
+/* Komponenta obrasca za upit (inquiry-form.js) */
+mozgic-upit {
+  display: block;
+}
+
 .inquiry {
   padding: 32px;
   background: var(--white);
