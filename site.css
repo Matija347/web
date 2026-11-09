@@ -1,0 +1,226 @@
+/* ====================================================================
+   site.css — dorade izgleda (učitava se zadnji, nakon ostalih stilova)
+==================================================================== */
+
+/* --------------------------------------------------------------------
+   Linkovi: jasno podcrtani, bez strelica
+-------------------------------------------------------------------- */
+.text-link,
+.product-link,
+.email-link,
+.legal-footer a,
+.footer-contact a,
+.connection-section .text-link {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  border-bottom: 0;
+  color: var(--plum);
+}
+.text-link:hover,
+.product-link:hover,
+.email-link:hover,
+.legal-footer a:hover,
+.footer-contact a:hover {
+  color: var(--plum-dark);
+  text-decoration-thickness: 2px;
+}
+
+/* --------------------------------------------------------------------
+   Podnožje: kontakt
+-------------------------------------------------------------------- */
+.footer-contact a {
+  font-size: 14px;
+}
+.footer-contact .footer-contact-title {
+  font-size: 10.6px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--plum);
+  margin: 0 0 4px;
+}
+
+/* --------------------------------------------------------------------
+   Poklon: planer učenja (stranica seta Planiranje učenja)
+-------------------------------------------------------------------- */
+.included-items .gift-highlight .gift-text {
+  margin: 4px 0 0;
+  font-size: 14px;
+  letter-spacing: normal;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* --------------------------------------------------------------------
+   Traka "Čemu služi · Za dijete · …" na stranicama setova i kompleta:
+   linkovi s podlogom, centrirano, lomi se u više redova (bez
+   vodoravnog scrollanja na mobitelu)
+-------------------------------------------------------------------- */
+.detail-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px 0;
+  overflow: visible;
+  font-size: 12.7px;
+}
+.detail-nav a {
+  white-space: nowrap;
+  padding: 8px 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--plum);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.detail-nav a:hover {
+  background: var(--lavender);
+  color: var(--plum-dark);
+}
+@media (max-width: 680px) {
+  .detail-nav {
+    gap: 8px;
+    padding: 14px 0;
+    font-size: 12px;
+  }
+  .detail-nav a {
+    padding: 7px 12px;
+  }
+}
+
+/* --------------------------------------------------------------------
+   "Istražite ostale setove": kartice koje jasno izgledaju kao linkovi
+-------------------------------------------------------------------- */
+.related-links a {
+  padding: 20px 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+.related-links a:first-child {
+  border-top: 1px solid var(--line);
+}
+.related-links strong {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+}
+.related-links a:hover {
+  background: var(--lavender);
+  border-color: #c9b8c4;
+}
+@media (max-width: 680px) {
+  .related-links {
+    gap: 10px;
+  }
+  .related-links a {
+    padding: 16px 18px;
+  }
+}
+
+/* --------------------------------------------------------------------
+   Početna: setovi i komplet u jednom carouselu
+-------------------------------------------------------------------- */
+.product-carousel {
+  --carousel-slide: calc((100% - 28px) / 2);
+  --carousel-gap: 28px;
+}
+.product-carousel .product {
+  height: auto;
+}
+.product-carousel .carousel-track {
+  align-items: stretch;
+  padding-bottom: 4px;
+}
+.product .product-photo {
+  aspect-ratio: 3/2;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+}
+.product .product-photo > img {
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+.product .product-photo:hover > img {
+  transform: scale(1.03);
+}
+.product-copy .product-button {
+  margin-top: auto;
+  align-self: flex-start;
+  font-size: 14px;
+  gap: 18px;
+}
+
+/* Kartica kompleta */
+.product.komplet {
+  background: var(--plum);
+  border-color: var(--plum);
+  color: var(--white);
+}
+.product.komplet .product-photo {
+  background: #e9e3e7;
+}
+.product.komplet .eyebrow {
+  color: var(--white);
+  opacity: 0.8;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+.product.komplet h3 {
+  color: var(--white);
+}
+.product.komplet .komplet-lead {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 18px;
+  min-height: 0;
+  color: var(--white);
+  opacity: 0.9;
+}
+.product.komplet .komplet-price {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0 0 22px;
+  min-height: 0;
+  color: var(--white);
+}
+.product.komplet .komplet-price strong {
+  font: 400 36px/1.2 var(--serif);
+}
+.product.komplet .komplet-price small {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+@media (max-width: 900px) {
+  .product-carousel {
+    --carousel-slide: 86%;
+    --carousel-gap: 16px;
+  }
+}
+
+/* --------------------------------------------------------------------
+   Pravni kutak: linkovi i kartice-linkovi jasno označeni
+-------------------------------------------------------------------- */
+.legal-copy .text-link {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.legal-copy .legal-topic h3 {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+}
+.legal-copy .legal-topic:hover {
+  background: var(--lavender);
+}

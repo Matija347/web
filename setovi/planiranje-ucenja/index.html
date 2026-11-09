@@ -27,8 +27,9 @@
     <script defer="" src="/app.js"></script>
     <script defer="" src="/inquiry-form.js"></script>
     <link href="/gallery.css" rel="stylesheet" />
-    <script defer="" src="/gallery.js"></script>
+    <script defer="" src="/carousel.js"></script>
     <link href="/legal.css" rel="stylesheet" />
+    <link href="/site.css" rel="stylesheet" />
     <script defer="" src="/legal.js"></script>
   </head>
   <body class="detail-page">
@@ -76,8 +77,9 @@
           <span></span><span></span>
         </button>
         <nav aria-label="Glavni izbornik" id="navigation">
-          <a href="/#pristup">Kako pomažu</a><a href="/#mozgic">Setovi i komplet</a
+          <a href="/#pristup">Kako funkcionira</a><a href="/#mozgic">Setovi i komplet</a
           ><a href="/#o-meni">O autorici</a><a href="/#pitanja">Pitanja</a
+          ><a href="#kontakt-info">Kontakt</a
           ><a class="nav-cta" href="#kontakt"
             >Naruči <svg aria-hidden="true"><use href="#arrow"></use></svg
           ></a>
@@ -107,52 +109,42 @@
         <aside class="set-aside">
           <span class="eyebrow">KARTICE ZA DIJETE + VODIČ ZA RODITELJE</span>
           <div
-            class="photo-gallery gallery-pair"
-            data-gallery
-            data-gallery-key="detail-planiranje"
-            data-gallery-name="Planiranje učenja"
+            class="carousel photo-carousel"
+            data-carousel
+            aria-label="Fotografije: Planiranje učenja"
           >
-            <figure class="gallery-item">
-              <button
-                class="gallery-stage"
-                type="button"
-                data-gallery-index="0"
-                aria-label="Uvećaj fotografiju: Planiranje učenja — vodič za roditelje"
-              >
-                <img
-                  src="/assets/products/planiranje-vodic.png"
-                  alt="Planiranje učenja — vodič za roditelje"
-                  width="1536"
-                  height="1024"
-                  loading="lazy"
-                  decoding="async"
-                /><span class="gallery-magnify" aria-hidden="true">＋</span>
-              </button>
-              <figcaption class="gallery-caption">
-                <span>Vodič za roditelje</span
-                ><span class="gallery-hint">Uvećajte fotografiju</span>
-              </figcaption>
-            </figure>
-            <figure class="gallery-item">
-              <button
-                class="gallery-stage"
-                type="button"
-                data-gallery-index="1"
-                aria-label="Uvećaj fotografiju: Planiranje učenja — kartice za dijete"
-              >
-                <img
-                  src="/assets/products/planiranje-kartice.jpg"
-                  alt="Planiranje učenja — kartice za dijete"
-                  width="1600"
-                  height="1067"
-                  loading="lazy"
-                  decoding="async"
-                /><span class="gallery-magnify" aria-hidden="true">＋</span>
-              </button>
-              <figcaption class="gallery-caption">
-                <span>Kartice za dijete</span><span class="gallery-hint">Uvećajte fotografiju</span>
-              </figcaption>
-            </figure>
+            <div class="carousel-track">
+              <figure class="gallery-item">
+                <div class="gallery-stage">
+                  <img
+                    src="/assets/products/planiranje-vodic.png"
+                    alt="Planiranje učenja — vodič za roditelje"
+                    width="1536"
+                    height="1024"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <figcaption class="gallery-caption">
+                  <span>Vodič za roditelje</span>
+                </figcaption>
+              </figure>
+              <figure class="gallery-item">
+                <div class="gallery-stage">
+                  <img
+                    src="/assets/products/planiranje-kartice.jpg"
+                    alt="Planiranje učenja — kartice za dijete"
+                    width="1600"
+                    height="1067"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <figcaption class="gallery-caption">
+                  <span>Kartice za dijete</span>
+                </figcaption>
+              </figure>
+            </div>
           </div>
           <p>Od nejasne obveze do plana koji dijete razumije.</p>
           <div><strong>29,90 €</strong><small>Dostava dodatno, prema ponudi.</small></div>
@@ -326,10 +318,16 @@
                 <p>A5 format, klamano, 21 str.</p>
               </div>
             </article>
-            <p class="gift-highlight">
-              <span class="gift-icon" aria-hidden="true">🎁</span
-              ><strong>POKLON: PLANER UČENJA</strong>
-            </p>
+            <div class="gift-highlight">
+              <span class="gift-icon" aria-hidden="true">🎁</span>
+              <div>
+                <strong>POKLON: PLANER UČENJA</strong>
+                <p class="gift-text">
+                  S jedne strane obrazac za planiranje učenja, a s druge strane primjer kako ga
+                  popuniti.
+                </p>
+              </div>
+            </div>
             <p class="included-note">
               Za djecu nižih razreda osnovne škole koja znaju čitati, uz početno uključivanje
               roditelja ili druge odrasle osobe.
@@ -355,19 +353,17 @@
             Komplet sadrži sva četiri područja. Možete ih uvoditi postupno i birati prema
             trenutačnim potrebama djeteta.
           </p>
-          <a class="text-link" href="/mozgic-komplet/"
-            >Detaljno o Mozgićevu kompletu <span>↗</span></a
-          >
+          <a class="text-link" href="/mozgic-komplet/">Detaljno o Mozgićevu kompletu</a>
         </div>
       </section>
       <section class="related-section wrap section">
-        <p class="eyebrow">ISTRAŽITE I OSTALA PODRUČJA</p>
-        <h2>Vještine koje se <em>nadopunjuju.</em></h2>
+        <p class="eyebrow">VJEŠTINE KOJE SE NADOPUNJUJU</p>
+        <h2>Istražite <em>ostale setove.</em></h2>
         <div class="related-links">
-          <a href="/setovi/aktivno-citanje/"><span>02</span><strong>Aktivno čitanje</strong> ↗</a
-          ><a href="/setovi/mentalne-mape/"><span>03</span><strong>Mentalne mape</strong> ↗</a
+          <a href="/setovi/aktivno-citanje/"><span>02</span><strong>Aktivno čitanje</strong></a
+          ><a href="/setovi/mentalne-mape/"><span>03</span><strong>Mentalne mape</strong></a
           ><a href="/setovi/aktivno-prisjecanje/"
-            ><span>04</span><strong>Aktivno prisjećanje</strong> ↗</a
+            ><span>04</span><strong>Aktivno prisjećanje</strong></a
           >
         </div>
       </section>
@@ -380,9 +376,7 @@
               s malo više <em>mira.</em>
             </h2>
             <p class="contact-ready">Spremni na prvi korak?</p>
-            <a class="email-link" href="mailto:mirela.vlasic@gmail.com"
-              >mirela.vlasic@gmail.com <span>↗</span></a
-            >
+            <a class="email-link" href="mailto:mirela.vlasic@gmail.com">mirela.vlasic@gmail.com</a>
             <p class="location">Virovitica, Hrvatska</p>
           </div>
           <mozgic-upit initial-product="planiranje">
@@ -399,6 +393,11 @@
         <a class="footer-name" href="/">Mozgićeve kartice za učenje</a>
         <p>Podrška za učenje. Prostor za rast.</p>
       </div>
+      <div class="footer-contact" id="kontakt-info">
+        <p class="footer-contact-title">Kontakt</p>
+        <a href="mailto:mirela.vlasic@gmail.com">mirela.vlasic@gmail.com</a>
+        <p>Virovitica, Hrvatska</p>
+      </div>
       <div class="footer-meta">
         <p>MVF, obrt za edukaciju i savjetovanje · Virovitica</p>
         <p>
@@ -407,8 +406,7 @@
         </p>
       </div>
       <nav aria-label="Uvjeti kupnje i privatnost" class="legal-footer">
-        <a class="legal-footer-title" href="/pravni-kutak/"
-          >Pravni kutak <small>radna verzija</small></a
+        <a class="legal-footer-title" href="/pravni-kutak/">Pravni kutak</a
         ><a href="/pravni-kutak/uvjeti-kupnje/">Uvjeti kupnje</a
         ><a href="/pravni-kutak/placanje-i-dostava/">Plaćanje i dostava</a
         ><a href="/pravni-kutak/prigovori-i-reklamacije/">Prigovori i reklamacije</a
@@ -430,28 +428,10 @@
         tehnički omogućuje dostavu poruke. Za početni upit nije potrebno slati djetetovo ime, školu
         ili osjetljive podatke.
       </p>
-      <a class="text-link" href="mailto:mirela.vlasic@gmail.com"
-        >Kontakt za pitanja o podacima <span>↗</span></a
-      >
+      <a class="text-link" href="mailto:mirela.vlasic@gmail.com">Kontakt za pitanja o podacima</a>
       <p>
-        <a class="text-link" href="/pravni-kutak/privatnost/"
-          >Cijela politika privatnosti <span>↗</span></a
-        >
+        <a class="text-link" href="/pravni-kutak/privatnost/">Cijela politika privatnosti</a>
       </p>
-    </dialog>
-    <dialog aria-labelledby="photo-dialog-title" class="photo-dialog" id="photo-dialog">
-      <div class="photo-dialog-header">
-        <h2 id="photo-dialog-title">Fotografije proizvoda</h2>
-        <button aria-label="Zatvori uvećanu fotografiju" class="close-dialog" type="button">
-          ×
-        </button>
-      </div>
-      <div class="photo-dialog-stage"><img alt="" id="photo-dialog-image" /></div>
-      <div class="photo-dialog-controls">
-        <button aria-label="Prethodna fotografija" id="photo-previous" type="button">←</button>
-        <p aria-live="polite" id="photo-dialog-caption"></p>
-        <button aria-label="Sljedeća fotografija" id="photo-next" type="button">→</button>
-      </div>
     </dialog>
   </body>
 </html>

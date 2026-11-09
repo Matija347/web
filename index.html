@@ -17,10 +17,11 @@
   <link href="/product-photos.css" rel="stylesheet"/>
   <link href="/gallery.css" rel="stylesheet"/>
   <link href="/legal.css" rel="stylesheet"/>
+    <link href="/site.css" rel="stylesheet" />
 
   <script defer="" src="/app.js"></script>
   <script defer="" src="/inquiry-form.js"></script>
-  <script defer="" src="/gallery.js"></script>
+  <script defer="" src="/carousel.js"></script>
   <script defer="" src="/legal.js"></script>
 </head>
 
@@ -46,10 +47,10 @@
       </a>
       <button aria-controls="navigation" aria-expanded="false" aria-label="Otvori izbornik" class="menu-toggle"><span></span><span></span></button>
       <nav aria-label="Glavni izbornik" id="navigation">
-        <a href="#pristup">Kako pomažu</a>
+        <a href="#pristup">Kako funkcionira</a>
         <a href="#mozgic">Setovi i komplet</a>
         <a href="#o-meni">O autorici</a>
-        <a href="#pitanja">Pitanja</a>
+        <a href="#pitanja">Pitanja</a><a href="#kontakt-info">Kontakt</a>
         <a class="nav-cta" href="#kontakt">Naruči <svg aria-hidden="true"><use href="#arrow"></use></svg></a>
       </nav>
     </div>
@@ -64,15 +65,13 @@
         <h1 id="hero-title">Mozgićeve<br/><em>kartice za učenje.</em></h1>
       </div>
       <div class="hero-product" id="hero-product-photo">
-        <div class="photo-gallery gallery-single" data-gallery data-gallery-key="hero-komplet" data-gallery-name="Mozgićev komplet">
+        <div class="photo-gallery gallery-single">
           <figure class="gallery-item">
-            <button class="gallery-stage" type="button" data-gallery-index="0" aria-label="Uvećaj fotografiju: Mozgićev komplet — četiri seta: svaki sadrži kartice za djecu i vodič za odrasle">
+            <div class="gallery-stage">
               <img src="/assets/products/mozgic-komplet-naslovna.png" alt="Mozgićev komplet — četiri seta: svaki sadrži kartice za djecu i vodič za odrasle" width="1536" height="1024" fetchpriority="high" loading="eager" decoding="async"/>
-              <span class="gallery-magnify" aria-hidden="true">＋</span>
-            </button>
+            </div>
             <figcaption class="gallery-caption">
               <span>Četiri seta: svaki sadrži kartice za djecu i vodič za odrasle</span>
-              <span class="gallery-hint">Uvećajte fotografiju</span>
             </figcaption>
           </figure>
         </div>
@@ -146,122 +145,90 @@
           <span>Kartice za dijete + vodič za roditelje</span>
         </div>
 
-        <div class="product-grid">
+        <div class="carousel product-carousel" data-carousel aria-label="Setovi i komplet">
+        <div class="carousel-track">
 
         <!-- SET 01 -->
         <article class="product yellow">
-          <div class="photo-gallery gallery-single" data-gallery data-gallery-key="home-planiranje" data-gallery-name="Planiranje učenja">
-            <figure class="gallery-item">
-              <button class="gallery-stage" type="button" data-gallery-index="0" aria-label="Uvećaj fotografiju: Planiranje učenja — kartice za dijete i vodič za roditelje">
-                <img src="/assets/products/planiranje-set.png" alt="Planiranje učenja — kartice za dijete i vodič za roditelje" width="1536" height="1024" loading="lazy" decoding="async"/>
-                <span class="set-number">SET 01</span>
-                <span class="gallery-magnify" aria-hidden="true">＋</span>
-              </button>
-              <figcaption class="gallery-caption">
-                <span>Kartice za dijete i vodič za roditelje</span>
-                <span class="gallery-hint">Uvećajte fotografiju</span>
-              </figcaption>
-            </figure>
-          </div>
+          <a class="product-photo gallery-stage" href="/setovi/planiranje-ucenja/" tabindex="-1" aria-hidden="true">
+            <img src="/assets/products/planiranje-set.png" alt="Planiranje učenja — kartice za dijete i vodič za roditelje" width="1536" height="1024" loading="lazy" decoding="async"/>
+            <span class="set-number">SET 01</span>
+          </a>
           <div class="product-copy">
             <h3>Planiranje učenja</h3>
             <div class="product-outcomes">
               <p><strong>Za dijete</strong> Dijete uči rasporediti obveze, razložiti veće zadatke i pratiti vlastiti plan.</p>
               <p><strong>Za roditelja</strong> Roditelj dobiva smjernice za strukturu, male izbore i postupno prepuštanje odgovornosti.</p>
             </div>
-            <a aria-label="Detaljno o setu: Planiranje učenja" class="product-link" href="/setovi/planiranje-ucenja/">Detaljno o setu <span>↗</span></a>
+            <a aria-label="Detaljno o setu: Planiranje učenja" class="button product-button" href="/setovi/planiranje-ucenja/">Detaljno o setu <svg aria-hidden="true"><use href="#arrow"></use></svg></a>
           </div>
         </article>
 
         <!-- SET 02 -->
         <article class="product blue">
-          <div class="photo-gallery gallery-single" data-gallery data-gallery-key="home-citanje" data-gallery-name="Aktivno čitanje">
-            <figure class="gallery-item">
-              <button class="gallery-stage" type="button" data-gallery-index="0" aria-label="Uvećaj fotografiju: Aktivno čitanje — kartice za dijete i vodič za roditelje">
-                <img src="/assets/products/aktivno-citanje-set.png" alt="Aktivno čitanje — kartice za dijete i vodič za roditelje" width="1671" height="941" loading="lazy" decoding="async"/>
-                <span class="set-number">SET 02</span>
-                <span class="gallery-magnify" aria-hidden="true">＋</span>
-              </button>
-              <figcaption class="gallery-caption">
-                <span>Kartice za dijete i vodič za roditelje</span>
-                <span class="gallery-hint">Uvećajte fotografiju</span>
-              </figcaption>
-            </figure>
-          </div>
+          <a class="product-photo gallery-stage" href="/setovi/aktivno-citanje/" tabindex="-1" aria-hidden="true">
+            <img src="/assets/products/aktivno-citanje-set.png" alt="Aktivno čitanje — kartice za dijete i vodič za roditelje" width="1671" height="941" loading="lazy" decoding="async"/>
+            <span class="set-number">SET 02</span>
+          </a>
           <div class="product-copy">
             <h3>Aktivno čitanje</h3>
             <div class="product-outcomes">
               <p><strong>Za dijete</strong> Dijete uči razumjeti tekst, izdvojiti važno i objasniti pročitano svojim riječima.</p>
               <p><strong>Za roditelja</strong> Roditelj dobiva smjernice kako pitanjima i primjerenom podrškom poticati razumijevanje.</p>
             </div>
-            <a aria-label="Detaljno o setu: Aktivno čitanje" class="product-link" href="/setovi/aktivno-citanje/">Detaljno o setu <span>↗</span></a>
+            <a aria-label="Detaljno o setu: Aktivno čitanje" class="button product-button" href="/setovi/aktivno-citanje/">Detaljno o setu <svg aria-hidden="true"><use href="#arrow"></use></svg></a>
           </div>
         </article>
 
         <!-- SET 03 -->
         <article class="product green">
-          <div class="photo-gallery gallery-single" data-gallery data-gallery-key="home-mape" data-gallery-name="Mentalne mape">
-            <figure class="gallery-item">
-              <button class="gallery-stage" type="button" data-gallery-index="0" aria-label="Uvećaj fotografiju: Mentalne mape — kartice za dijete i vodič za roditelje">
-                <img src="/assets/products/mentalne-mape-set.png" alt="Mentalne mape — kartice za dijete i vodič za roditelje" width="1536" height="1024" loading="lazy" decoding="async"/>
-                <span class="set-number">SET 03</span>
-                <span class="gallery-magnify" aria-hidden="true">＋</span>
-              </button>
-              <figcaption class="gallery-caption">
-                <span>Kartice za dijete i vodič za roditelje</span>
-                <span class="gallery-hint">Uvećajte fotografiju</span>
-              </figcaption>
-            </figure>
-          </div>
+          <a class="product-photo gallery-stage" href="/setovi/mentalne-mape/" tabindex="-1" aria-hidden="true">
+            <img src="/assets/products/mentalne-mape-set.png" alt="Mentalne mape — kartice za dijete i vodič za roditelje" width="1536" height="1024" loading="lazy" decoding="async"/>
+            <span class="set-number">SET 03</span>
+          </a>
           <div class="product-copy">
             <h3>Mentalne mape</h3>
             <div class="product-outcomes">
               <p><strong>Za dijete</strong> Dijete uči izdvojiti pojmove, povezati ih u cjelinu i ponavljati uz vlastitu mapu.</p>
               <p><strong>Za roditelja</strong> Roditelj dobiva smjernice kako podržati djetetovo razmišljanje, odabir i organizaciju gradiva.</p>
             </div>
-            <a aria-label="Detaljno o setu: Mentalne mape" class="product-link" href="/setovi/mentalne-mape/">Detaljno o setu <span>↗</span></a>
+            <a aria-label="Detaljno o setu: Mentalne mape" class="button product-button" href="/setovi/mentalne-mape/">Detaljno o setu <svg aria-hidden="true"><use href="#arrow"></use></svg></a>
           </div>
         </article>
 
         <!-- SET 04 -->
         <article class="product lavender">
-          <div class="photo-gallery gallery-single" data-gallery data-gallery-key="home-kartice" data-gallery-name="Aktivno prisjećanje">
-            <figure class="gallery-item">
-              <button class="gallery-stage" type="button" data-gallery-index="0" aria-label="Uvećaj fotografiju: Aktivno prisjećanje — kartice za dijete i vodič za roditelje">
-                <img src="/assets/products/aktivno-prisjecanje-set.png" alt="Aktivno prisjećanje — kartice za dijete i vodič za roditelje" width="1536" height="1024" loading="lazy" decoding="async"/>
-                <span class="set-number">SET 04</span>
-                <span class="gallery-magnify" aria-hidden="true">＋</span>
-              </button>
-              <figcaption class="gallery-caption">
-                <span>Kartice za dijete i vodič za roditelje</span>
-                <span class="gallery-hint">Uvećajte fotografiju</span>
-              </figcaption>
-            </figure>
-          </div>
+          <a class="product-photo gallery-stage" href="/setovi/aktivno-prisjecanje/" tabindex="-1" aria-hidden="true">
+            <img src="/assets/products/aktivno-prisjecanje-set.png" alt="Aktivno prisjećanje — kartice za dijete i vodič za roditelje" width="1536" height="1024" loading="lazy" decoding="async"/>
+            <span class="set-number">SET 04</span>
+          </a>
           <div class="product-copy">
             <h3>Aktivno prisjećanje</h3>
             <div class="product-outcomes">
               <p><strong>Za dijete</strong> Dijete uči izraditi vlastite kartice, prisjetiti se odgovora i procijeniti što još treba ponoviti.</p>
               <p><strong>Za roditelja</strong> Roditelj dobiva smjernice za podršku pri izradi, provjeri odgovora i postupnom osamostaljivanju.</p>
             </div>
-            <a aria-label="Detaljno o setu: Aktivno prisjećanje" class="product-link" href="/setovi/aktivno-prisjecanje/">Detaljno o setu <span>↗</span></a>
+            <a aria-label="Detaljno o setu: Aktivno prisjećanje" class="button product-button" href="/setovi/aktivno-prisjecanje/">Detaljno o setu <svg aria-hidden="true"><use href="#arrow"></use></svg></a>
           </div>
         </article>
 
-      </div>
-
-        <div class="bundle">
-          <div>
+        <!-- KOMPLET -->
+        <article class="product komplet">
+          <a class="product-photo gallery-stage" href="/mozgic-komplet/" tabindex="-1" aria-hidden="true">
+            <img src="/assets/products/mozgic-komplet-detalji.png" alt="Mozgićev komplet — sva četiri seta Mozgićevih kartica za učenje" width="1672" height="941" loading="lazy" decoding="async"/>
+            <span class="set-number">KOMPLET</span>
+          </a>
+          <div class="product-copy">
             <span class="eyebrow">SVA ČETIRI PODRUČJA, JEDAN KOMPLET</span>
             <h3>Mozgićev komplet</h3>
-            <p>4 seta kartica + 4 vodiča za roditelje</p>
+            <p class="komplet-lead">Sva četiri seta Mozgićevih kartica za učenje</p>
+            <p class="komplet-price"><strong>89,90 €</strong> <small>Pojedinačni set: 29,90 € · dostava dodatno</small></p>
+            <a class="button light product-button" href="/mozgic-komplet/">Detaljno o kompletu <svg aria-hidden="true"><use href="#arrow"></use></svg></a>
           </div>
-          <div class="bundle-price">
-            <span>89,90 €</span>
-            <small>Pojedinačni set: 29,90 € · dostava dodatno</small>
-          </div>
-          <a class="button light" href="/mozgic-komplet/">Detaljno o kompletu <svg aria-hidden="true"><use href="#arrow"></use></svg></a>
+        </article>
+
         </div>
+      </div>
 
         <div class="inside">
           <div class="inside-copy">
@@ -372,7 +339,7 @@
           <svg aria-hidden="true" id="finder-icon"><use href="#plan"></use></svg>
           <h3 id="finder-name">Planiranje učenja</h3>
           <p id="finder-description">Ovaj set može biti početak kada djetetu treba jasniji pregled obveza i struktura učenja.</p>
-          <a class="text-link" href="/setovi/planiranje-ucenja/" id="finder-cta">Detaljno o ovom setu <span>↗</span></a>
+          <a class="text-link" href="/setovi/planiranje-ucenja/" id="finder-cta">Detaljno o ovom setu</a>
         </div>
       </div>
       <p class="finder-footnote">Možete krenuti od jednog seta i zadržati se na koracima koji su vašem djetetu trenutačno potrebni.</p>
@@ -415,7 +382,7 @@
           <p class="eyebrow">SLJEDEĆI KORAK, VAŠIM TEMPOM</p>
           <h2 id="contact-title">Upoznajmo učenje<br/> s malo više <em>mira.</em></h2>
           <p class="contact-ready">Spremni na prvi korak?</p>
-          <a class="email-link" href="mailto:mirela.vlasic@gmail.com">mirela.vlasic@gmail.com <span>↗</span></a>
+          <a class="email-link" href="mailto:mirela.vlasic@gmail.com">mirela.vlasic@gmail.com</a>
           <p class="location">Virovitica, Hrvatska</p>
         </div>
 
@@ -437,12 +404,17 @@
       <a class="footer-name" href="#">Mozgićeve kartice za učenje</a>
       <p>Podrška za učenje. Prostor za rast.</p>
     </div>
+    <div class="footer-contact" id="kontakt-info">
+        <p class="footer-contact-title">Kontakt</p>
+        <a href="mailto:mirela.vlasic@gmail.com">mirela.vlasic@gmail.com</a>
+        <p>Virovitica, Hrvatska</p>
+      </div>
     <div class="footer-meta">
       <p>MVF, obrt za edukaciju i savjetovanje · Virovitica</p>
       <p>© 2026. Mirela Vlašić Fištrović <span>·</span> <button id="privacy-open">O privatnosti</button></p>
     </div>
     <nav aria-label="Uvjeti kupnje i privatnost" class="legal-footer">
-      <a class="legal-footer-title" href="/pravni-kutak/">Pravni kutak <small>radna verzija</small></a>
+      <a class="legal-footer-title" href="/pravni-kutak/">Pravni kutak</a>
       <a href="/pravni-kutak/uvjeti-kupnje/">Uvjeti kupnje</a>
       <a href="/pravni-kutak/placanje-i-dostava/">Plaćanje i dostava</a>
       <a href="/pravni-kutak/prigovori-i-reklamacije/">Prigovori i reklamacije</a>
@@ -459,24 +431,8 @@
     <h2 id="privacy-title">O privatnosti</h2>
     <p>Podatke koje upišete u obrazac (ime i prezime, e-adresa, odabrani proizvod i poruka) šaljemo putem vanjskog servisa za obradu obrazaca isključivo radi odgovora na vaš upit.</p>
     <p>Podaci se ne koriste u druge svrhe i ne prosljeđuju trećima, osim navedenom servisu koji tehnički omogućuje dostavu poruke. Za početni upit nije potrebno slati djetetovo ime, školu ili osjetljive podatke.</p>
-    <a class="text-link" href="mailto:mirela.vlasic@gmail.com">Kontakt za pitanja o podacima <span>↗</span></a>
-    <p><a class="text-link" href="/pravni-kutak/privatnost/">Cijela politika privatnosti <span>↗</span></a></p>
-  </dialog>
-
-  <!-- ===== DIJALOG: FOTOGRAFIJE ===== -->
-  <dialog aria-labelledby="photo-dialog-title" class="photo-dialog" id="photo-dialog">
-    <div class="photo-dialog-header">
-      <h2 id="photo-dialog-title">Fotografije proizvoda</h2>
-      <button aria-label="Zatvori uvećanu fotografiju" class="close-dialog" type="button">×</button>
-    </div>
-    <div class="photo-dialog-stage">
-      <img alt="" id="photo-dialog-image"/>
-    </div>
-    <div class="photo-dialog-controls">
-      <button aria-label="Prethodna fotografija" id="photo-previous" type="button">←</button>
-      <p aria-live="polite" id="photo-dialog-caption"></p>
-      <button aria-label="Sljedeća fotografija" id="photo-next" type="button">→</button>
-    </div>
+    <a class="text-link" href="mailto:mirela.vlasic@gmail.com">Kontakt za pitanja o podacima</a>
+    <p><a class="text-link" href="/pravni-kutak/privatnost/">Cijela politika privatnosti</a></p>
   </dialog>
 
 </body>

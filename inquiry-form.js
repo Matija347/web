@@ -46,7 +46,6 @@
       summary: 'Aktivno prisjećanje',
       price: 29.9,
     },
-    { value: 'pomoc', option: 'Trebam pomoć pri odabiru', summary: 'Pomoć pri odabiru' },
   ];
 
   const MESSAGES = {
@@ -178,7 +177,6 @@
       this.valueEl = this.querySelector('.ms-value');
       this.labelEl = this.querySelector('[data-summary-label]');
       this.priceEl = this.querySelector('[data-summary-price]');
-      this.shippingEl = this.querySelector('.shipping-note');
       this.statusEl = this.querySelector('.mail-status');
       this.checkboxes = [...this.querySelectorAll('input[name="proizvod"]')];
 
@@ -233,9 +231,6 @@
 
       const total = selected.reduce((sum, v) => sum + ((byValue[v] && byValue[v].price) || 0), 0);
       this.priceEl.textContent = total > 0 ? formatPrice(total) : '—';
-
-      // Napomenu o dostavi sakrij ako je odabrana samo "pomoć pri odabiru"
-      this.shippingEl.hidden = selected.length > 0 && selected.every((v) => v === 'pomoc');
     }
 
     setStatus(text) {
