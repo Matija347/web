@@ -8,7 +8,6 @@ const products = {
     icon: 'plan',
     description:
       'Ovaj set može biti početak kada djetetu treba jasniji pregled obveza i struktura učenja.',
-    label: 'Planiranje učenja · kartice + vodič',
   },
   citanje: {
     url: '/setovi/aktivno-citanje/',
@@ -16,7 +15,6 @@ const products = {
     icon: 'book',
     description:
       'Ovaj set usmjerava dijete na promišljanje o pročitanom i prepoznavanje važnih informacija.',
-    label: 'Aktivno čitanje · kartice + vodič',
   },
   kartice: {
     url: '/setovi/aktivno-prisjecanje/',
@@ -24,7 +22,6 @@ const products = {
     icon: 'cards',
     description:
       'Ovaj set upoznaje dijete s učenjem prisjećanjem kako bi moglo bolje provjeriti što zna.',
-    label: 'Aktivno prisjećanje · kartice + vodič',
   },
   mape: {
     url: '/setovi/mentalne-mape/',
@@ -32,7 +29,6 @@ const products = {
     icon: 'map',
     description:
       'Ovaj set može pomoći djetetu u organiziranju pojmova i povezivanju gradiva u smislenu cjelinu.',
-    label: 'Mentalne mape · kartice + vodič',
   },
 };
 

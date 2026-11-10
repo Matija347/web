@@ -8,7 +8,7 @@
   --lavender: #e8e0eb;
   --line: #ded6cf;
   --gold: #aa8c58;
-  --serif: Georgia, "Times New Roman", serif;
+  --serif: Georgia, 'Times New Roman', serif;
   --sans: Arial, Helvetica, sans-serif;
 }
 * {
@@ -207,21 +207,12 @@ em {
   line-height: 1.2;
   flex-shrink: 0;
 }
-.brand-leaf {
-  width: 33px;
-  height: 43px;
-  color: var(--gold);
-  stroke-width: 1.2;
-}
 .brand small {
   display: block;
   font-family: var(--sans);
   font-size: 8.5px;
   letter-spacing: 0.15em;
   margin-top: 8px;
-}
-.brand .surname {
-  display: inline;
 }
 .site-header nav {
   display: flex;
@@ -298,79 +289,6 @@ em {
 }
 .hero-actions .text-link {
   font-size: 11.7px;
-}
-.hero-note {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-top: 42px;
-}
-.hero-note svg {
-  height: 40px;
-  width: 30px;
-  stroke-width: 1.15;
-  color: var(--gold);
-  transform: rotate(12deg);
-}
-.hero-note p {
-  font-size: 11.7px;
-  color: var(--muted);
-  line-height: 1.7;
-  margin: 0;
-}
-.hero-note strong {
-  font-weight: 400;
-}
-.hero-visual {
-  position: relative;
-  padding-right: 27px;
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.portrait-frame {
-  height: 513px;
-  overflow: hidden;
-  border-radius: 48% 48% 3px 3px;
-  background: #cbbcae;
-}
-.portrait-frame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 40%;
-}
-.portrait-caption {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  position: absolute;
-  bottom: 18px;
-  left: -26px;
-  background: var(--white);
-  padding: 21px 28px;
-  box-shadow: 0 12px 40px #392b2310;
-  border-left: 2px solid var(--gold);
-}
-.portrait-caption span {
-  font-family: var(--serif);
-  font-size: 23.3px;
-}
-.portrait-caption small {
-  font-size: 9.5px;
-  color: var(--muted);
-  letter-spacing: 0.025em;
-}
-.vertical-note {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  font-size: 8.5px;
-  letter-spacing: 0.14em;
-  writing-mode: vertical-rl;
-  transform: translateY(-50%);
-  color: var(--muted);
 }
 .intro-strip {
   background: #ece5ed;
@@ -483,25 +401,9 @@ em {
   margin-right: 32px;
 }
 .product-meta span:before {
-  content: "✓";
+  content: '✓';
   color: var(--plum);
   font-size: 12.7px;
-}
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
-}
-.product-art {
-  height: 223px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  background: #ecdfb8;
-  color: #7d6433;
-  border-radius: 5px 5px 0 0;
 }
 .set-number {
   position: absolute;
@@ -509,34 +411,6 @@ em {
   top: 17px;
   letter-spacing: 0.14em;
   font-size: 8.5px;
-}
-.product-art > svg {
-  height: 95px;
-  width: 95px;
-  stroke-width: 1.2;
-  transition: transform 0.25s;
-}
-.product:hover .product-art > svg {
-  transform: translateY(-5px) rotate(-4deg);
-}
-.art-note {
-  position: absolute;
-  bottom: 20px;
-  font-family: var(--serif);
-  font-size: 15.9px;
-  font-style: italic;
-}
-.product.blue .product-art {
-  background: #d6e3e5;
-  color: #46666a;
-}
-.product.pink .product-art {
-  background: #eedad8;
-  color: #93625f;
-}
-.product.lavender .product-art {
-  background: #dfd6e6;
-  color: #756080;
 }
 .product-copy {
   padding: 23px 0 0;
@@ -552,91 +426,12 @@ em {
   color: var(--muted);
   margin-bottom: 20px;
 }
-.product-link {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  border: 0;
-  border-bottom: 1px solid #c7bcb2;
-  background: none;
-  font-size: 11.7px;
-  padding: 8px 0;
-}
-.product-link > span {
-  font-size: 19.1px;
-}
-.product-link:hover {
-  color: var(--plum);
-}
-.bundle {
-  background: var(--plum);
-  color: var(--white);
-  padding: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-  margin-top: 45px;
-  border-radius: 4px;
-}
-.bundle .eyebrow {
-  font-size: 8.5px;
-  letter-spacing: 0.1em;
-  opacity: 0.8;
-}
-.bundle h3 {
-  font-size: 30.7px;
-  margin: 5px 0;
-}
-.bundle p {
-  font-size: 11.7px;
-  margin: 0;
-  opacity: 0.85;
-}
-.bundle-price {
-  display: flex;
-  flex-direction: column;
-}
-.bundle-price > span {
-  font-family: var(--serif);
-  font-size: 36.1px;
-  line-height: 1.3;
-}
-.bundle-price > small {
-  font-size: 9.5px;
-  margin-top: 6px;
-  opacity: 0.85;
-}
-.bundle .button {
-  font-size: 11.7px;
-  gap: 16px;
-  white-space: nowrap;
-}
 .inside {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: 96px;
   align-items: center;
   padding: 95px 30px 0;
-}
-.inside-image {
-  position: relative;
-  padding: 30px;
-  background: #e5dce6;
-  border-radius: 4px;
-  transform: rotate(-2deg);
-}
-.inside-image img {
-  box-shadow: 0 10px 24px #6c536b22;
-  border-radius: 3px;
-}
-.inside-image > span {
-  display: block;
-  font-size: 8.5px;
-  letter-spacing: 0.04em;
-  text-align: center;
-  margin-top: 20px;
-  color: #6b5b6e;
 }
 .inside-copy h3 {
   font-size: 36.1px;
@@ -753,22 +548,6 @@ em {
 }
 .about-identity h2 {
   font-size: 63.9px;
-}
-.about-leaf {
-  position: absolute;
-  width: 65px;
-  height: 80px;
-  color: var(--gold);
-  left: 270px;
-  top: 135px;
-  transform: rotate(20deg);
-  stroke-width: 0.9;
-}
-.signature {
-  font-family: var(--serif);
-  font-style: italic;
-  font-size: 25.4px;
-  margin-bottom: 4px;
 }
 .about-identity > span {
   font-size: 10.6px;
@@ -896,7 +675,7 @@ mozgic-upit {
   font-weight: 400;
   color: var(--muted);
 }
-.inquiry input:not([type="checkbox"]),
+.inquiry input:not([type='checkbox']),
 .inquiry select,
 .inquiry textarea {
   display: block;
@@ -953,7 +732,7 @@ mozgic-upit {
   color: var(--muted);
   transition: transform 0.2s;
 }
-.multiselect-toggle[aria-expanded="true"] .ms-caret {
+.multiselect-toggle[aria-expanded='true'] .ms-caret {
   transform: rotate(180deg);
 }
 .multiselect-panel {
@@ -992,7 +771,7 @@ mozgic-upit {
 .ms-option:hover {
   background: #f2ecf1;
 }
-.ms-option input[type="checkbox"] {
+.ms-option input[type='checkbox'] {
   width: 17px;
   height: 17px;
   flex-shrink: 0;
@@ -1116,38 +895,6 @@ dialog ul {
   font-size: 25.4px;
   line-height: 1;
 }
-.dialog-icon {
-  width: 70px;
-  height: 70px;
-  color: var(--plum);
-  stroke-width: 1.2;
-}
-.dialog-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  border-top: 1px solid var(--line);
-  padding-top: 23px;
-  margin-top: 27px;
-}
-.dialog-bottom p {
-  margin: 0;
-}
-.dialog-bottom strong {
-  font-family: var(--serif);
-  font-weight: 400;
-  font-size: 26.5px;
-  color: var(--ink);
-}
-.dialog-bottom small {
-  display: block;
-  font-size: 9.5px;
-}
-.dialog-bottom .button {
-  font-size: 11.7px;
-  gap: 15px;
-}
 #privacy-dialog h2 {
   margin-top: 30px;
 }
@@ -1157,9 +904,6 @@ dialog ul {
 @media (min-width: 1500px) {
   .hero h1 {
     font-size: 74.2px;
-  }
-  .hero-visual .portrait-frame {
-    height: 560px;
   }
   .hero {
     padding-top: 78px;
@@ -1185,44 +929,17 @@ dialog ul {
   .hero-actions {
     gap: 15px;
   }
-  .portrait-frame {
-    height: 480px;
-  }
-  .portrait-caption {
-    left: -10px;
-    bottom: 12px;
-    padding: 18px 22px;
-  }
   .approach {
     gap: 60px;
   }
   .section-top {
     gap: 50px;
   }
-  .product-grid {
-    gap: 18px;
-  }
-  .product-art {
-    height: 205px;
-  }
   .product h3 {
     font-size: 21.2px;
   }
   .product p {
     min-height: 63px;
-  }
-  .bundle {
-    gap: 18px;
-    padding: 27px;
-  }
-  .bundle h3 {
-    font-size: 26.5px;
-  }
-  .bundle-price > span {
-    font-size: 31.8px;
-  }
-  .bundle-price > small {
-    max-width: 180px;
   }
   .inside {
     gap: 60px;
@@ -1286,25 +1003,6 @@ dialog ul {
     flex-direction: column;
     gap: 16px;
   }
-  .hero-note {
-    margin-top: 28px;
-  }
-  .portrait-frame {
-    height: 440px;
-  }
-  .portrait-caption {
-    padding: 15px 18px;
-    bottom: 0;
-  }
-  .portrait-caption span {
-    font-size: 19.1px;
-  }
-  .portrait-caption small {
-    font-size: 7.4px;
-  }
-  .vertical-note {
-    font-size: 7.4px;
-  }
   .strip-inner > span {
     display: none;
   }
@@ -1337,13 +1035,6 @@ dialog ul {
     font-size: 9.5px;
     margin-right: 20px;
   }
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 35px 25px;
-  }
-  .product-art {
-    height: 230px;
-  }
   .product h3 {
     font-size: 26.5px;
   }
@@ -1351,34 +1042,10 @@ dialog ul {
     min-height: 0;
     font-size: 13.8px;
   }
-  .product-link {
-    font-size: 12.7px;
-  }
-  .bundle {
-    flex-wrap: wrap;
-  }
-  .bundle > div:first-child {
-    width: calc(60% - 18px);
-  }
-  .bundle-price {
-    width: 40%;
-    align-items: flex-end;
-  }
-  .bundle-price > small {
-    max-width: none;
-    text-align: right;
-  }
-  .bundle .button {
-    width: 100%;
-    margin-top: 8px;
-  }
   .inside {
     gap: 38px;
     padding: 70px 0 0;
     grid-template-columns: 1fr 1fr;
-  }
-  .inside-image {
-    padding: 20px;
   }
   .inside-copy h3 {
     font-size: 31.8px;
@@ -1415,15 +1082,6 @@ dialog ul {
   }
   .about-identity h2 {
     font-size: 53.6px;
-  }
-  .about-leaf {
-    left: 190px;
-    top: 165px;
-    width: 48px;
-    height: 60px;
-  }
-  .signature {
-    font-size: 22.3px;
   }
   .about-copy {
     padding-top: 25px;
@@ -1481,10 +1139,6 @@ dialog ul {
     letter-spacing: 0.1em;
     margin-top: 6px;
   }
-  .brand-leaf {
-    width: 27px;
-    height: 35px;
-  }
   .menu-toggle {
     display: flex;
     flex-direction: column;
@@ -1503,10 +1157,10 @@ dialog ul {
     background: var(--plum);
     transition: transform 0.2s;
   }
-  .menu-toggle[aria-expanded="true"] span:first-child {
+  .menu-toggle[aria-expanded='true'] span:first-child {
     transform: translateY(3.5px) rotate(45deg);
   }
-  .menu-toggle[aria-expanded="true"] span:last-child {
+  .menu-toggle[aria-expanded='true'] span:last-child {
     transform: translateY(-3.5px) rotate(-45deg);
   }
   .site-header nav {
@@ -1586,38 +1240,6 @@ dialog ul {
   .hero-actions .text-link {
     font-size: 10.6px;
   }
-  .hero-note {
-    display: none;
-  }
-  .hero-visual {
-    align-self: stretch;
-    width: 100%;
-    max-width: 430px;
-    margin: 0 auto;
-    padding-right: 18px;
-  }
-  .portrait-frame {
-    height: 380px;
-    border-radius: 47% 47% 2px 2px;
-  }
-  .portrait-frame img {
-    object-position: 50% 34%;
-  }
-  .portrait-caption {
-    bottom: 16px;
-    left: 10px;
-    padding: 16px 20px;
-  }
-  .portrait-caption span {
-    font-size: 22.3px;
-  }
-  .portrait-caption small {
-    font-size: 8.5px;
-  }
-  .vertical-note {
-    right: -3px;
-    font-size: 6.4px;
-  }
   .strip-inner {
     padding-top: 19px;
     padding-bottom: 19px;
@@ -1677,24 +1299,10 @@ dialog ul {
     font-size: 10.6px;
     gap: 10px;
   }
-  .product-grid {
-    gap: 30px 17px;
-  }
-  .product-art {
-    height: 180px;
-  }
   .set-number {
     left: 13px;
     top: 13px;
     font-size: 7.4px;
-  }
-  .product-art > svg {
-    width: 72px;
-    height: 72px;
-  }
-  .art-note {
-    font-size: 11.7px;
-    bottom: 15px;
   }
   .product-copy {
     padding-top: 17px;
@@ -1711,55 +1319,11 @@ dialog ul {
     min-height: 57px;
     margin-bottom: 10px;
   }
-  .product-link {
-    font-size: 11.7px;
-  }
-  .bundle {
-    margin-top: 33px;
-    padding: 24px;
-    gap: 20px;
-  }
-  .bundle > div:first-child {
-    width: 100%;
-  }
-  .bundle h3 {
-    font-size: 30.7px;
-  }
-  .bundle .eyebrow {
-    font-size: 7.4px;
-  }
-  .bundle p {
-    font-size: 11.7px;
-  }
-  .bundle-price {
-    width: 100%;
-    align-items: flex-start;
-  }
-  .bundle-price > span {
-    font-size: 35px;
-  }
-  .bundle-price > small {
-    font-size: 9.5px;
-    text-align: left;
-    margin-top: 2px;
-  }
-  .bundle .button {
-    font-size: 12.7px;
-    justify-content: space-between;
-    margin-top: 0;
-  }
   .inside {
     display: flex;
     flex-direction: column;
     gap: 35px;
     padding-top: 60px;
-  }
-  .inside-image {
-    width: calc(100% - 16px);
-    padding: 23px;
-  }
-  .inside-image > span {
-    margin-top: 13px;
   }
   .inside-copy {
     width: 100%;
@@ -1831,16 +1395,6 @@ dialog ul {
     font-size: 55.6px;
     margin-bottom: 24px;
   }
-  .about-leaf {
-    left: auto;
-    right: 28px;
-    top: 90px;
-    width: 65px;
-    height: 85px;
-  }
-  .signature {
-    font-size: 25.4px;
-  }
   .about-identity > span {
     font-size: 10.6px;
   }
@@ -1900,7 +1454,7 @@ dialog ul {
   .inquiry label {
     font-size: 11.7px;
   }
-  .inquiry input:not([type="checkbox"]),
+  .inquiry input:not([type='checkbox']),
   .inquiry select,
   .inquiry textarea {
     font-size: 13.8px;
@@ -1950,19 +1504,6 @@ dialog ul {
   dialog li {
     font-size: 13.8px;
   }
-  .dialog-bottom {
-    align-items: start;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .dialog-bottom .button {
-    width: 100%;
-    justify-content: space-between;
-  }
-  .dialog-icon {
-    height: 60px;
-    width: 60px;
-  }
 }
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -1980,19 +1521,11 @@ dialog ul {
     font-size: 17px;
     gap: 7px;
   }
-  .brand-leaf {
-    width: 23px;
-  }
   .brand small {
     font-size: 6px;
   }
   .header-inner {
     gap: 8px;
-  }
-  .product .art-note {
-    font-size: 10.6px;
-    text-align: center;
-    padding: 0 6px;
   }
   .hero-actions .text-link {
     font-size: 10.6px;

@@ -168,10 +168,6 @@ body {
 .product-meta {
   font-size: 12px;
 }
-.product-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 32px;
-}
 .product {
   min-width: 0;
   overflow: hidden;
@@ -231,32 +227,6 @@ body {
   letter-spacing: 0.1em;
   margin-bottom: 7px;
   color: var(--plum);
-}
-.product-link {
-  margin-top: auto;
-  padding: 12px 0 3px;
-  font-size: 14px;
-  border-color: #c9beb8;
-}
-.bundle {
-  padding: 34px 38px;
-  border-radius: 8px;
-  margin-top: 38px;
-}
-.bundle h3 {
-  font-size: 34px;
-}
-.bundle .eyebrow {
-  font-size: 10px;
-}
-.bundle p {
-  font-size: 13px;
-}
-.bundle-price > small {
-  font-size: 11px;
-}
-.bundle .button {
-  font-size: 14px;
 }
 .inside {
   display: grid;
@@ -526,9 +496,6 @@ body {
   .hero-audience {
     margin-top: 16px;
   }
-  .product-grid {
-    gap: 27px;
-  }
   .product-copy {
     padding: 22px;
   }
@@ -681,9 +648,6 @@ body {
     gap: 5px;
     margin-top: 9px;
   }
-  .hero-product .gallery-hint {
-    display: none;
-  }
   .hero-description {
     font-size: 24px;
     line-height: 1.35;
@@ -722,10 +686,6 @@ body {
   .approach-steps p {
     font-size: 15px;
   }
-  .product-grid {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 28px;
-  }
   .product-meta span {
     font-size: 11px;
   }
@@ -753,30 +713,6 @@ body {
   .product-outcomes p strong {
     font-size: 10px;
     margin-bottom: 5px;
-  }
-  .product-link {
-    font-size: 14px;
-  }
-  .bundle {
-    padding: 26px;
-    gap: 22px;
-    margin-top: 28px;
-  }
-  .bundle .eyebrow {
-    font-size: 9px;
-  }
-  .bundle h3 {
-    font-size: 34px;
-  }
-  .bundle p {
-    font-size: 13px;
-  }
-  .bundle-price > small {
-    font-size: 11px;
-  }
-  .bundle .button {
-    font-size: 14px;
-    white-space: normal;
   }
   .inside {
     grid-template-columns: 1fr;

@@ -45,49 +45,6 @@ footer {
   text-underline-offset: 3px;
   color: var(--plum-dark);
 }
-.shop-assurance {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
-  border-top: 1px solid #bfaeb6;
-  margin-top: 65px;
-  padding-top: 55px;
-}
-.shop-assurance > div {
-  max-width: 460px;
-}
-.shop-assurance h3 {
-  font-size: 38px;
-  line-height: 1.15;
-  margin-bottom: 25px;
-}
-.shop-assurance p:not(.eyebrow) {
-  font-size: 15px;
-  line-height: 1.8;
-  color: var(--muted);
-}
-.shop-assurance figure {
-  margin: 0;
-  max-width: 380px;
-  width: 100%;
-  justify-self: end;
-}
-.shop-assurance figure img {
-  width: 100%;
-  height: auto;
-  background: #fff;
-}
-.shop-assurance figcaption {
-  font-size: 11px;
-  line-height: 1.6;
-  margin-top: 13px;
-  text-align: center;
-}
-.shop-assurance figcaption a {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
 .legal-page main {
   padding-bottom: 80px;
 }
@@ -132,28 +89,6 @@ footer {
 }
 .print-legal:hover {
   background: #ede5ed;
-}
-.legal-draft {
-  border: 1px solid #d6c5a3;
-  border-left: 3px solid #a78954;
-  background: #f4edde;
-  padding: 20px 25px;
-  border-radius: 5px;
-}
-.legal-draft strong {
-  font-size: 13px;
-  color: #725c36;
-}
-.legal-draft p {
-  font-size: 13px;
-  line-height: 1.75;
-  color: #6f614d;
-  margin: 6px 0 0;
-  max-width: 1020px;
-}
-.legal-draft a {
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 .legal-layout {
   display: grid;
@@ -256,15 +191,6 @@ footer {
   margin: 0;
   overflow-wrap: anywhere;
 }
-.pending-value {
-  display: inline-block;
-  color: #7a5e2e;
-  font-size: 12px;
-  padding: 1px 8px;
-  border: 1px dashed #cbb58b;
-  border-radius: 3px;
-  background: #f5eedf;
-}
 .legal-pending {
   padding: 17px 20px;
   background: #f4edde;
@@ -325,21 +251,6 @@ footer {
   color: var(--muted);
   font-size: 15px;
   line-height: 1.85;
-}
-.legal-guarantee {
-  max-width: 480px;
-  margin: 32px auto;
-}
-.legal-guarantee img {
-  width: 100%;
-  height: auto;
-  background: #fff;
-}
-.legal-guarantee figcaption {
-  font-size: 11px;
-  line-height: 1.8;
-  margin-top: 12px;
-  color: var(--muted);
 }
 .withdrawal-template {
   white-space: pre-wrap;
@@ -439,9 +350,6 @@ footer {
   .legal-card-grid {
     grid-template-columns: 1fr;
   }
-  .shop-assurance {
-    gap: 50px;
-  }
 }
 @media (max-width: 680px) {
   .legal-footer {
@@ -455,23 +363,6 @@ footer {
   }
   .form-legal-note {
     font-size: 11px;
-  }
-  .shop-assurance {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    margin-top: 45px;
-    padding-top: 38px;
-  }
-  .shop-assurance figure {
-    max-width: 380px;
-    justify-self: center;
-  }
-  .shop-assurance h3 {
-    font-size: 34px;
-    margin-bottom: 20px;
-  }
-  .shop-assurance p:not(.eyebrow) {
-    font-size: 14px;
   }
   .legal-intro {
     padding-top: 35px;
@@ -490,15 +381,6 @@ footer {
     font-size: 11px;
     white-space: normal;
     text-align: left;
-  }
-  .legal-draft {
-    padding: 18px 19px;
-  }
-  .legal-draft p {
-    font-size: 12px;
-  }
-  .legal-draft strong {
-    font-size: 13px;
   }
   .legal-layout {
     grid-template-columns: minmax(0, 1fr);
@@ -638,17 +520,6 @@ footer {
     font-size: 11pt;
     max-width: none;
   }
-  .legal-draft {
-    margin: 0 0 8mm;
-    padding: 4mm;
-    border: 1px solid #777;
-    background: #fff;
-  }
-  .legal-draft p,
-  .legal-draft strong {
-    font-size: 9pt;
-    color: #000;
-  }
   .legal-layout {
     display: block;
     padding: 0;
@@ -676,10 +547,6 @@ footer {
     background: #fff;
     border: 1px solid #777;
     box-shadow: none;
-  }
-  .legal-guarantee {
-    max-width: 155mm;
-    break-inside: avoid;
   }
   .legal-topic {
     break-inside: avoid;
