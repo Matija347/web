@@ -397,3 +397,48 @@
     margin-top: 0;
   }
 }
+
+/* --------------------------------------------------------------------
+   Linkovi na pojedinačne setove ("Istražite ostale setove"): u boji
+   seta, svijetla pozadina + tamniji tekst (kontrast ≥ 4,5:1)
+-------------------------------------------------------------------- */
+.related-links a {
+  --set-bg: var(--white);
+  --set-fg: var(--plum);
+  --set-border: var(--line);
+  background: var(--set-bg);
+  border-color: var(--set-border);
+  color: var(--set-fg);
+}
+.related-links a[href*='/setovi/planiranje-ucenja/'] {
+  --set-bg: #ecdfb8;
+  --set-fg: #725a2c;
+  --set-border: #dccb97;
+}
+.related-links a[href*='/setovi/aktivno-citanje/'] {
+  --set-bg: #d6e3e5;
+  --set-fg: #46666a;
+  --set-border: #bcd1d4;
+}
+.related-links a[href*='/setovi/mentalne-mape/'] {
+  --set-bg: #dce6cf;
+  --set-fg: #4d6638;
+  --set-border: #c3d3b0;
+}
+.related-links a[href*='/setovi/aktivno-prisjecanje/'] {
+  --set-bg: #dfd6e6;
+  --set-fg: #654f70;
+  --set-border: #cbbdd5;
+}
+.related-links a:first-child {
+  border-top-color: var(--set-border);
+}
+.related-links a > span {
+  color: var(--set-fg);
+  opacity: 0.75;
+}
+.related-links a:hover {
+  background: var(--set-bg);
+  border-color: var(--set-fg);
+  filter: brightness(0.97);
+}
