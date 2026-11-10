@@ -442,3 +442,14 @@
   border-color: var(--set-fg);
   filter: brightness(0.97);
 }
+
+/* Obrazac: poruka kad nije odabran nijedan proizvod */
+.inquiry .ms-error {
+  margin: 6px 0 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #a33a3a;
+}
+.inquiry .multiselect-toggle[aria-invalid='true'] {
+  border-color: #a33a3a;
+}

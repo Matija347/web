@@ -49,6 +49,7 @@
   ];
 
   const MESSAGES = {
+    noProduct: 'Odaberite barem jedan proizvod.',
     sending: 'Šaljem upit…',
     success: 'Hvala! Upit je poslan. Javljam vam se uskoro.',
     error: `Nešto nije prošlo kod slanja. Pokušajte ponovno ili pišite na ${CONTACT_EMAIL}.`,
@@ -113,6 +114,8 @@
           >${options}
           </div>
         </div>
+
+        <p class="ms-error" id="ms-error" role="alert" hidden></p>
 
         <label for="full-name">Ime i prezime</label>
         <input type="text" id="full-name" name="ime" autocomplete="name" required />
@@ -181,7 +184,13 @@
       this.checkboxes = [...this.querySelectorAll('input[name="proizvod"]')];
 
       this.toggle.addEventListener('click', () => this.openPanel(this.panel.hidden));
-      this.checkboxes.forEach((cb) => cb.addEventListener('change', () => this.updateSummary()));
+      this.errorEl = this.querySelector('.ms-error');
+      this.checkboxes.forEach((cb) =>
+        cb.addEventListener('change', () => {
+          this.updateSummary();
+          if (this.selected().length) this.showProductError(false);
+        }),
+      );
 
       // Zatvori izbornik klikom izvan njega ili tipkom Escape
       document.addEventListener('click', (event) => {
@@ -238,8 +247,23 @@
       this.statusEl.textContent = text;
     }
 
+    showProductError(show) {
+      this.errorEl.hidden = !show;
+      this.errorEl.textContent = show ? MESSAGES.noProduct : '';
+      this.toggle.setAttribute('aria-invalid', String(show));
+      if (show) this.toggle.setAttribute('aria-describedby', 'ms-error');
+      else this.toggle.removeAttribute('aria-describedby');
+    }
+
     async submit(event) {
       event.preventDefault();
+
+      // Bez odabranog proizvoda upit se ne šalje
+      if (!this.selected().length) {
+        this.showProductError(true);
+        this.toggle.focus();
+        return;
+      }
 
       const button = this.form.querySelector('button[type="submit"]');
       button.disabled = true;
