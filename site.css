@@ -224,3 +224,107 @@
 .legal-copy .legal-topic:hover {
   background: var(--lavender);
 }
+
+/* Traka sa sadržajem stranice: okvir je dovoljan, bez podvlačenja */
+.detail-nav a {
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------------
+   Stranice setova i kompleta: cijena u istom redu s gumbom za upit
+-------------------------------------------------------------------- */
+.detail-buy {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px 28px;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 30px;
+  padding: 18px 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+}
+.detail-price {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.detail-price strong {
+  font: 400 34px/1.1 var(--serif);
+  color: var(--plum-dark);
+  white-space: nowrap;
+}
+.detail-price small {
+  margin-top: 4px;
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.detail-buy .button {
+  font-size: 13.8px;
+  gap: 18px;
+}
+.detail-buy + .text-link {
+  margin-top: 16px;
+  font-size: 12.7px;
+}
+@media (max-width: 680px) {
+  .detail-buy {
+    width: 100%;
+    padding: 16px;
+  }
+  .detail-buy .button {
+    flex: 1 1 auto;
+    justify-content: space-between;
+  }
+}
+
+/* Desni stupac stranice seta: carousel je sada zadnji element; poništi
+   stil koji je bio namijenjen bloku s cijenom (product-photos.css) */
+.set-aside > .carousel:last-child {
+  display: block;
+  padding: 0;
+  border-top: 0;
+}
+
+/* Komplet: opis kompleta kao zaseban redak iznad cijene i gumba */
+.detail-buy-label {
+  flex-basis: 100%;
+  margin: 0 0 -6px;
+  font-size: 12.7px;
+  color: var(--muted);
+}
+
+/* Fotografije u carouselu: isti okvir za sve, da carousel ne mijenja visinu */
+.photo-carousel .gallery-stage {
+  aspect-ratio: 3 / 2;
+}
+.photo-carousel .gallery-stage > img {
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Cijena i gumb u istom redu i u užem stupcu (komplet): napomena o
+   dostavi smije se prelomiti */
+.detail-buy {
+  column-gap: 22px;
+}
+.detail-price small {
+  max-width: 150px;
+}
+@media (min-width: 681px) and (max-width: 1150px) {
+  .detail-buy {
+    padding: 16px;
+    column-gap: 16px;
+  }
+  .detail-price small {
+    max-width: 130px;
+  }
+  .detail-buy .button {
+    padding: 14px 18px;
+    gap: 12px;
+    font-size: 12.7px;
+  }
+}

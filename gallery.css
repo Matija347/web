@@ -87,6 +87,92 @@
   scroll-snap-align: start;
 }
 
+.carousel-viewport {
+  position: relative;
+}
+
+/* Trake sa strelicama uz lijevi i desni rub (vidljive kad je miš iznad) */
+.carousel-edge {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  height: var(--edge-height, 100%);
+  width: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  color: var(--plum);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.carousel-edge[hidden] {
+  display: none;
+}
+.carousel-edge-prev {
+  left: 0;
+  border-radius: 8px 0 0 8px;
+  background: linear-gradient(to right, #fffdf9f2, #fffdf900);
+}
+.carousel-edge-next {
+  right: 0;
+  border-radius: 0 8px 8px 0;
+  background: linear-gradient(to left, #fffdf9f2, #fffdf900);
+}
+.carousel-edge-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #bda9b7;
+  border-radius: 50%;
+  background: var(--white);
+  box-shadow: 0 4px 14px #39312f26;
+  transition: transform 0.2s;
+}
+.carousel-edge-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+}
+.carousel-edge:hover .carousel-edge-icon {
+  transform: scale(1.08);
+}
+.carousel:hover .carousel-edge,
+.carousel-edge:focus-visible {
+  opacity: 1;
+}
+.carousel.is-dragging .carousel-edge {
+  opacity: 0;
+}
+
+/* Povlačenje mišem */
+@media (hover: hover) and (pointer: fine) {
+  .carousel-track {
+    cursor: grab;
+  }
+}
+.carousel.is-dragging .carousel-track {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+  user-select: none;
+}
+.carousel.is-dragging .carousel-track a {
+  pointer-events: none;
+}
+
+/* Na dodirnim ekranima lista se prstom, trake nisu potrebne */
+@media (hover: none) {
+  .carousel-edge {
+    display: none;
+  }
+}
+
 .carousel-controls {
   display: flex;
   align-items: center;
@@ -95,36 +181,6 @@
 }
 .carousel-controls[hidden] {
   display: none;
-}
-.carousel-arrow {
-  flex: none;
-  display: grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  padding: 0;
-  border: 1px solid #bda9b7;
-  border-radius: 50%;
-  background: var(--white);
-  color: var(--plum);
-  cursor: pointer;
-  transition:
-    background 0.2s,
-    opacity 0.2s;
-}
-.carousel-arrow svg {
-  width: 20px;
-  height: 20px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.6;
-}
-.carousel-arrow:hover:not(:disabled) {
-  background: var(--lavender);
-}
-.carousel-arrow:disabled {
-  opacity: 0.35;
-  cursor: default;
 }
 .carousel-dots {
   display: flex;
@@ -189,8 +245,15 @@
     padding: 4px 8px;
     font-size: 9px;
   }
-  .carousel-arrow {
-    width: 38px;
-    height: 38px;
-  }
+}
+
+/* Točkice u sredini, brojač desno */
+.carousel-controls {
+  position: relative;
+  justify-content: center;
+  min-height: 24px;
+}
+.carousel-counter {
+  position: absolute;
+  right: 0;
 }
