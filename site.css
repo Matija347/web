@@ -266,10 +266,6 @@
   font-size: 13.8px;
   gap: 18px;
 }
-.detail-buy + .text-link {
-  margin-top: 16px;
-  font-size: 12.7px;
-}
 @media (max-width: 680px) {
   .detail-buy {
     width: 100%;
