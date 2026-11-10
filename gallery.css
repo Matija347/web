@@ -41,7 +41,7 @@
   border: 1px solid #e0d8cf;
   border-radius: 4px;
   padding: 5px 10px;
-  font: 10px/1.4 var(--sans);
+  font: 11px/1.4 var(--sans);
   color: #66574f;
   white-space: nowrap;
   letter-spacing: 0.12em;
@@ -233,7 +233,7 @@
 
 @media (max-width: 680px) {
   .gallery-caption {
-    font-size: 11px;
+    font-size: 12px;
     gap: 8px;
     flex-wrap: wrap;
     margin-top: 8px;
@@ -243,7 +243,7 @@
     top: 10px;
     left: 10px;
     padding: 4px 8px;
-    font-size: 9px;
+    font-size: 11px;
   }
 }
 

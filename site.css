@@ -33,7 +33,7 @@
   font-size: 14px;
 }
 .footer-contact .footer-contact-title {
-  font-size: 10.6px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -171,7 +171,7 @@
 .product.komplet .eyebrow {
   color: var(--white);
   opacity: 0.8;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.1em;
   margin-bottom: 8px;
 }
@@ -258,7 +258,7 @@
 }
 .detail-price small {
   margin-top: 4px;
-  font-size: 11.5px;
+  font-size: 12px;
   line-height: 1.5;
   color: var(--muted);
 }
@@ -452,4 +452,20 @@
 }
 .inquiry .multiselect-toggle[aria-invalid='true'] {
   border-color: #a33a3a;
+}
+
+/* --------------------------------------------------------------------
+   Ciljevi za dodir: najmanje 24 px (WCAG 2.2, 2.5.8) za samostalne
+   linkove i gumbe u podnožju i breadcrumbu
+-------------------------------------------------------------------- */
+.legal-footer a,
+.breadcrumb a,
+.footer-contact a,
+.footer-meta button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+}
+.footer-contact {
+  gap: 2px;
 }

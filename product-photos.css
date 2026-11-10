@@ -87,7 +87,7 @@ body {
   padding: 0;
 }
 .hero .eyebrow {
-  font-size: 10px;
+  font-size: 11px;
   margin: 0 0 19px;
   letter-spacing: 0.13em;
 }
@@ -141,7 +141,7 @@ body {
   font-size: 13px;
 }
 .hero-audience {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--muted);
   line-height: 1.6;
   margin: 20px 0 0;
@@ -197,7 +197,7 @@ body {
 }
 .product .gallery-caption {
   padding: 0 24px;
-  font-size: 11px;
+  font-size: 12px;
 }
 .product-copy {
   padding: 24px 25px 23px;
@@ -223,7 +223,7 @@ body {
   margin: 0;
 }
 .product-outcomes p strong {
-  font: 600 10px/1.5 var(--sans);
+  font: 600 11px/1.5 var(--sans);
   letter-spacing: 0.1em;
   margin-bottom: 7px;
   color: var(--plum);
@@ -240,7 +240,7 @@ body {
   margin-bottom: 0;
 }
 .inside-copy .eyebrow {
-  font-size: 10px;
+  font-size: 11px;
 }
 .format-items article {
   display: flex;
@@ -307,7 +307,7 @@ body {
   font-weight: 400;
 }
 .author-photo span {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--muted);
   letter-spacing: 0.025em;
 }
@@ -400,7 +400,7 @@ body {
 .set-aside > .eyebrow {
   padding: 0;
   margin: 0 0 16px;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.09em;
   color: var(--muted);
 }
@@ -432,7 +432,7 @@ body {
   color: var(--plum);
 }
 .set-aside small {
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.7;
   max-width: 220px;
 }
@@ -541,7 +541,7 @@ body {
     font-size: 12px;
   }
   .hero-actions .text-link {
-    font-size: 11px;
+    font-size: 12px;
   }
   .hero-product {
     align-self: start;
@@ -585,7 +585,7 @@ body {
     font-size: 25px;
   }
   .set-aside > .eyebrow {
-    font-size: 9px;
+    font-size: 11px;
   }
   .set-aside > div:last-child {
     gap: 16px;
@@ -630,7 +630,7 @@ body {
     padding-bottom: 38px;
   }
   .hero .eyebrow {
-    font-size: 10px;
+    font-size: 11px;
     margin-bottom: 14px;
   }
   .hero h1 {
@@ -643,7 +643,7 @@ body {
     align-self: stretch;
   }
   .hero-product .gallery-caption {
-    font-size: 11px;
+    font-size: 12px;
     line-height: 1.6;
     gap: 5px;
     margin-top: 9px;
@@ -672,7 +672,7 @@ body {
     font-size: 13px;
   }
   .hero-audience {
-    font-size: 11px;
+    font-size: 12px;
     max-width: 330px;
     margin-top: 18px;
   }
@@ -687,11 +687,11 @@ body {
     font-size: 15px;
   }
   .product-meta span {
-    font-size: 11px;
+    font-size: 12px;
   }
   .product .gallery-caption {
     padding: 0 20px;
-    font-size: 10px;
+    font-size: 12px;
   }
   .product-copy {
     padding: 22px 20px;
@@ -711,7 +711,7 @@ body {
     line-height: 1.75;
   }
   .product-outcomes p strong {
-    font-size: 10px;
+    font-size: 11px;
     margin-bottom: 5px;
   }
   .inside {
@@ -723,7 +723,7 @@ body {
     font-size: 32px;
   }
   .inside-copy .eyebrow {
-    font-size: 9px;
+    font-size: 11px;
   }
   .format-items p {
     font-size: 14px;
@@ -746,7 +746,7 @@ body {
     font-size: 27px;
   }
   .author-photo span {
-    font-size: 11px;
+    font-size: 12px;
   }
   .about-copy {
     padding: 0;
@@ -804,7 +804,7 @@ body {
     min-height: 0;
   }
   .set-aside > .eyebrow {
-    font-size: 9px;
+    font-size: 11px;
     margin: 0 0 14px;
   }
   .set-aside > p {
@@ -825,7 +825,7 @@ body {
     font-size: 32px;
   }
   .set-aside small {
-    font-size: 10px;
+    font-size: 12px;
     max-width: 185px;
   }
   .bundle-hero h1 {
@@ -840,7 +840,7 @@ body {
     font-size: 23px;
   }
   .brand-wordmark small {
-    font-size: 11px;
+    font-size: 12px;
   }
   .hero h1 {
     font-size: 41px;

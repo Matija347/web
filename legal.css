@@ -27,7 +27,7 @@ footer {
 }
 .legal-footer-title small {
   font-weight: 400;
-  font-size: 9px;
+  font-size: 12px;
   margin-left: 5px;
   border: 1px solid #d8c7af;
   border-radius: 3px;
@@ -35,7 +35,7 @@ footer {
   color: #806335;
 }
 .form-legal-note {
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.7;
   color: var(--muted);
   margin: 14px 0 20px;
@@ -77,7 +77,7 @@ footer {
   border-radius: 5px;
   background: transparent;
   padding: 11px 16px;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.7;
   white-space: nowrap;
   margin-bottom: 4px;
@@ -301,7 +301,7 @@ footer {
     background 0.2s;
 }
 .legal-topic > span {
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.12em;
   color: var(--gold);
 }
@@ -362,7 +362,7 @@ footer {
     margin: 0 0 4px;
   }
   .form-legal-note {
-    font-size: 11px;
+    font-size: 12px;
   }
   .legal-intro {
     padding-top: 35px;
@@ -378,7 +378,7 @@ footer {
     font-size: 15px;
   }
   .print-legal {
-    font-size: 11px;
+    font-size: 12px;
     white-space: normal;
     text-align: left;
   }
@@ -482,7 +482,7 @@ footer {
     font-size: 27px;
   }
   .legal-copy .legal-fine {
-    font-size: 11px;
+    font-size: 12px;
   }
 }
 @media print {

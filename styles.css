@@ -118,7 +118,7 @@ em {
   padding-bottom: 106px;
 }
 .eyebrow {
-  font-size: 10.6px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.16em;
   line-height: 1.7;
@@ -210,7 +210,7 @@ em {
 .brand small {
   display: block;
   font-family: var(--sans);
-  font-size: 8.5px;
+  font-size: 11px;
   letter-spacing: 0.15em;
   margin-top: 8px;
 }
@@ -256,7 +256,7 @@ em {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 9.5px;
+  font-size: 11px;
   letter-spacing: 0.13em;
   margin-bottom: 26px;
 }
@@ -288,7 +288,7 @@ em {
   flex-wrap: wrap;
 }
 .hero-actions .text-link {
-  font-size: 11.7px;
+  font-size: 12px;
 }
 .intro-strip {
   background: #ece5ed;
@@ -313,7 +313,7 @@ em {
   display: flex;
   align-items: center;
   gap: 19px;
-  font-size: 8.5px;
+  font-size: 11px;
   letter-spacing: 0.13em;
 }
 .strip-inner i {
@@ -391,7 +391,7 @@ em {
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   padding: 13px 0;
-  font-size: 10.6px;
+  font-size: 12px;
   color: var(--muted);
 }
 .product-meta span {
@@ -410,7 +410,7 @@ em {
   left: 21px;
   top: 17px;
   letter-spacing: 0.14em;
-  font-size: 8.5px;
+  font-size: 11px;
 }
 .product-copy {
   padding: 23px 0 0;
@@ -444,11 +444,11 @@ em {
   line-height: 1.8;
 }
 .inside-copy .eyebrow {
-  font-size: 8.5px;
+  font-size: 11px;
   letter-spacing: 0.12em;
 }
 .inside-copy .text-link {
-  font-size: 11.7px;
+  font-size: 12px;
 }
 .finder-heading {
   max-width: 560px;
@@ -503,7 +503,7 @@ em {
   border-radius: 5px;
 }
 .finder-result .eyebrow {
-  font-size: 8.5px;
+  font-size: 11px;
   margin-bottom: 30px;
 }
 .finder-result > svg {
@@ -527,11 +527,11 @@ em {
   line-height: 1.8;
 }
 .finder-result .text-link {
-  font-size: 11.7px;
+  font-size: 12px;
   margin-top: 8px;
 }
 .finder-footnote {
-  font-size: 10.6px;
+  font-size: 12px;
   color: var(--muted);
   margin: 20px 0 0;
 }
@@ -550,7 +550,7 @@ em {
   font-size: 63.9px;
 }
 .about-identity > span {
-  font-size: 10.6px;
+  font-size: 12px;
   color: var(--muted);
 }
 .about-copy {
@@ -645,7 +645,7 @@ em {
   font-size: 23.3px;
 }
 .contact-copy .location {
-  font-size: 10.6px !important;
+  font-size: 12px !important;
   margin-top: 17px;
 }
 /* Komponenta obrasca za upit (inquiry-form.js) */
@@ -666,7 +666,7 @@ mozgic-upit {
 .inquiry label:not(.ms-option),
 .inquiry .ms-label {
   display: block;
-  font-size: 10.6px;
+  font-size: 12px;
   font-weight: 600;
   margin-bottom: 8px;
 }
@@ -728,7 +728,7 @@ mozgic-upit {
 }
 .ms-caret {
   flex-shrink: 0;
-  font-size: 10px;
+  font-size: 12px;
   color: var(--muted);
   transition: transform 0.2s;
 }
@@ -786,7 +786,7 @@ mozgic-upit {
   align-items: center;
   padding: 14px 0 6px;
   border-top: 1px solid var(--line);
-  font-size: 10.6px;
+  font-size: 12px;
 }
 .inquiry-summary strong {
   font-family: var(--serif);
@@ -794,7 +794,7 @@ mozgic-upit {
   font-weight: 400;
 }
 .shipping-note {
-  font-size: 9.5px;
+  font-size: 12px;
   color: var(--muted);
   margin: 0 0 20px;
 }
@@ -803,13 +803,13 @@ mozgic-upit {
   justify-content: space-between;
 }
 .form-note {
-  font-size: 9.5px;
+  font-size: 12px;
   color: var(--muted);
   line-height: 1.7;
   margin: 13px 0 0;
 }
 .mail-status {
-  font-size: 11.7px;
+  font-size: 12px;
   background: #f0e9f0;
   padding: 12px;
   margin: 15px 0 0;
@@ -834,7 +834,7 @@ footer {
   font-size: 23.3px;
 }
 footer p {
-  font-size: 9.5px;
+  font-size: 12px;
   color: var(--muted);
   margin: 6px 0 0;
 }
@@ -845,7 +845,7 @@ footer p {
   margin: 0 9px;
 }
 .footer-meta button {
-  font-size: 9.5px;
+  font-size: 12px;
   border: 0;
   padding: 0;
   background: none;
@@ -899,7 +899,7 @@ dialog ul {
   margin-top: 30px;
 }
 #privacy-dialog .text-link {
-  font-size: 11.7px;
+  font-size: 12px;
 }
 @media (min-width: 1500px) {
   .hero h1 {
@@ -967,7 +967,7 @@ dialog ul {
   }
   .site-header nav {
     gap: 17px;
-    font-size: 11.7px;
+    font-size: 12px;
   }
   .site-header nav a:first-child {
     display: none;
@@ -986,14 +986,14 @@ dialog ul {
     font-size: 47.4px;
   }
   .hero .eyebrow {
-    font-size: 7.4px;
+    font-size: 11px;
     letter-spacing: 0.09em;
   }
   .hero-description {
     font-size: 13.8px;
   }
   .hero .button {
-    font-size: 11.7px;
+    font-size: 12px;
     padding: 12px 18px;
     min-height: 47px;
     gap: 15px;
@@ -1032,7 +1032,7 @@ dialog ul {
     gap: 7px;
   }
   .product-meta span {
-    font-size: 9.5px;
+    font-size: 12px;
     margin-right: 20px;
   }
   .product h3 {
@@ -1108,7 +1108,7 @@ dialog ul {
     font-size: 25.4px;
   }
   .inquiry .button {
-    font-size: 11.7px;
+    font-size: 12px;
     padding: 12px 15px;
   }
   .footer-name {
@@ -1135,7 +1135,7 @@ dialog ul {
     gap: 9px;
   }
   .brand small {
-    font-size: 6.9px;
+    font-size: 11px;
     letter-spacing: 0.1em;
     margin-top: 6px;
   }
@@ -1204,7 +1204,7 @@ dialog ul {
     padding-top: 0;
   }
   .hero .eyebrow {
-    font-size: 8.5px;
+    font-size: 11px;
     letter-spacing: 0.09em;
     margin-bottom: 21px;
   }
@@ -1238,7 +1238,7 @@ dialog ul {
     font-size: 12.7px;
   }
   .hero-actions .text-link {
-    font-size: 10.6px;
+    font-size: 12px;
   }
   .strip-inner {
     padding-top: 19px;
@@ -1274,7 +1274,7 @@ dialog ul {
     max-width: none;
   }
   .eyebrow {
-    font-size: 9.5px;
+    font-size: 11px;
     letter-spacing: 0.13em;
     margin-bottom: 19px;
   }
@@ -1296,13 +1296,13 @@ dialog ul {
     padding: 14px 0;
   }
   .product-meta span {
-    font-size: 10.6px;
+    font-size: 12px;
     gap: 10px;
   }
   .set-number {
     left: 13px;
     top: 13px;
-    font-size: 7.4px;
+    font-size: 11px;
   }
   .product-copy {
     padding-top: 17px;
@@ -1314,7 +1314,7 @@ dialog ul {
     margin-bottom: 9px;
   }
   .product p {
-    font-size: 11.7px;
+    font-size: 12px;
     line-height: 1.7;
     min-height: 57px;
     margin-bottom: 10px;
@@ -1329,7 +1329,7 @@ dialog ul {
     width: 100%;
   }
   .inside-copy .eyebrow {
-    font-size: 8.5px;
+    font-size: 11px;
   }
   .inside-copy h3 {
     font-size: 36.1px;
@@ -1369,7 +1369,7 @@ dialog ul {
     height: 55px;
   }
   .finder-result .eyebrow {
-    font-size: 7.4px;
+    font-size: 11px;
     margin-bottom: 36px;
   }
   .finder-result h3 {
@@ -1384,7 +1384,7 @@ dialog ul {
     font-size: 12.7px;
   }
   .finder-footnote {
-    font-size: 10.6px;
+    font-size: 12px;
     line-height: 1.8;
   }
   .about-grid {
@@ -1396,7 +1396,7 @@ dialog ul {
     margin-bottom: 24px;
   }
   .about-identity > span {
-    font-size: 10.6px;
+    font-size: 12px;
   }
   .about-copy {
     padding-top: 8px;
@@ -1452,7 +1452,7 @@ dialog ul {
     font-size: 28.6px;
   }
   .inquiry label {
-    font-size: 11.7px;
+    font-size: 12px;
   }
   .inquiry input:not([type='checkbox']),
   .inquiry select,
@@ -1461,17 +1461,17 @@ dialog ul {
     padding: 12px 9px;
   }
   .inquiry-summary {
-    font-size: 10.6px;
+    font-size: 12px;
   }
   .inquiry .button {
     font-size: 12.7px;
     padding: 13px 16px;
   }
   .form-note {
-    font-size: 10.6px;
+    font-size: 12px;
   }
   .shipping-note {
-    font-size: 10.6px;
+    font-size: 12px;
   }
   footer {
     align-items: flex-start;
@@ -1484,7 +1484,7 @@ dialog ul {
     text-align: left;
   }
   footer p {
-    font-size: 9.5px;
+    font-size: 12px;
   }
   .footer-name {
     font-size: 23.3px;
@@ -1493,7 +1493,7 @@ dialog ul {
     padding: 32px 24px;
   }
   dialog .eyebrow {
-    font-size: 8.5px;
+    font-size: 11px;
     margin-top: 15px;
     padding-right: 15px;
   }
@@ -1522,12 +1522,12 @@ dialog ul {
     gap: 7px;
   }
   .brand small {
-    font-size: 6px;
+    font-size: 12px;
   }
   .header-inner {
     gap: 8px;
   }
   .hero-actions .text-link {
-    font-size: 10.6px;
+    font-size: 12px;
   }
 }
