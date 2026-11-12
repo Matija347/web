@@ -3,8 +3,9 @@
 /* ====================================================================
    <mozgic-upit> — obrazac za upit (komponenta)
 
-   Jedan obrazac za sve stranice. Upit se šalje preko Formspreea,
-   korisnik ostaje na stranici.
+   Jedan obrazac za sve stranice. Upit se šalje Workeru na /api/upit
+   (worker/index.js), koji ga e-poštom prosljeđuje prodavateljici.
+   Korisnik ostaje na stranici.
 
    Upotreba u HTML-u:
 
@@ -27,9 +28,9 @@
   /* ------------------------------------------------------------------
      POSTAVKE — mijenjaju se samo ovdje i vrijede na svim stranicama
   ------------------------------------------------------------------ */
-  const FORM_ENDPOINT = 'https://formspree.io/f/xbggazne';
+  // Worker na Cloudflareu (worker/index.js) prima upit i šalje ga e-poštom
+  const FORM_ENDPOINT = '/api/upit';
   const CONTACT_EMAIL = 'mirela.vlasic@gmail.com';
-  const EMAIL_SUBJECT = 'Novi upit s web stranice — Mozgić';
 
   /* Proizvodi u izborniku: redoslijed ovdje = redoslijed u izborniku.
      option  = tekst u izborniku
@@ -140,7 +141,7 @@
         </div>
         <p class="shipping-note">Trošak dostave potvrđuje se u ponudi.</p>
 
-        <!-- Anti-spam: skriveno od ljudi; ako ga bot ispuni, Formspree odbacuje poruku -->
+        <!-- Anti-spam: skriveno od ljudi; ako ga bot ispuni, Worker ne šalje poruku -->
         <input
           type="text"
           name="_gotcha"
@@ -149,8 +150,6 @@
           aria-hidden="true"
           style="display: none"
         />
-        <!-- Naslov e-maila koji stiže na adresu iz Formspreea -->
-        <input type="hidden" name="_subject" value="${escapeHtml(EMAIL_SUBJECT)}" />
 
         <p class="form-legal-note">
           Slanje upita ne obvezuje vas na kupnju. Pročitajte
@@ -280,7 +279,11 @@
           this.updateSummary();
           this.setStatus(MESSAGES.success);
         } else {
-          this.setStatus(MESSAGES.error);
+          // Poruka s poslužitelja za neispravan unos (npr. "Upišite ispravnu e-adresu.")
+          const data = await response.json().catch(() => null);
+          this.setStatus(
+            response.status === 400 && data && data.message ? data.message : MESSAGES.error,
+          );
         }
       } catch {
         this.setStatus(MESSAGES.offline);

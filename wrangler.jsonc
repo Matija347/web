@@ -1,0 +1,29 @@
+// Cloudflare Worker: statična stranica + obrazac za upit (worker/index.js)
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Ime postojećeg Workera (adresa divine-glade-df8d.m-matija7.workers.dev)
+  "name": "divine-glade-df8d",
+  "main": "worker/index.js",
+  "compatibility_date": "2025-06-01",
+
+  // Statične datoteke stranice (HTML, CSS, JS, slike) iz korijena repozitorija.
+  // Datoteke koje se ne smiju javno posluživati navedene su u .assetsignore.
+  "assets": {
+    "directory": "./",
+    "binding": "ASSETS"
+  },
+
+  // Slanje upita e-poštom. Primatelj mora biti potvrđena adresa u
+  // Cloudflare Email Routingu, a pošiljatelj adresa na domeni mvf.hr.
+  "send_email": [
+    {
+      "name": "UPIT_EMAIL",
+      "destination_address": "mirela.vlasic@gmail.com"
+    }
+  ],
+
+  "vars": {
+    "FROM_ADDRESS": "obrazac@mvf.hr",
+    "TO_ADDRESS": "mirela.vlasic@gmail.com"
+  }
+}

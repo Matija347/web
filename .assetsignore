@@ -1,0 +1,12 @@
+# Datoteke koje Cloudflare ne smije posluživati kao dio stranice
+.git
+.wrangler
+node_modules
+worker
+wrangler.jsonc
+.assetsignore
+.prettierrc.json
+package.json
+package-lock.json
+*.md
+.gitignore
