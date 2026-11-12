@@ -124,8 +124,9 @@
           <h2>Što se događa kada pošaljete upit?</h2>
           <p>
             Kada pošaljete obrazac za upit, podaci koje ste upisali (ime i prezime, adresa e-pošte,
-            odabrani proizvodi i poruka) šalju se putem vanjskog servisa za obradu obrazaca
-            Formspree, koji ih prosljeđuje prodavatelju e-poštom. Stranica nema vlastitu bazu upita.
+            odabrani proizvodi i poruka) obrađuju se na poslužitelju pružatelja hostinga Cloudflare
+            i odmah se prosljeđuju prodavatelju e-poštom. Stranica podatke iz obrasca ne sprema i
+            nema vlastitu bazu upita.
           </p>
           <p>
             Upit možete poslati i izravno e-poštom na
@@ -186,14 +187,12 @@
           <p>Trenutačno su angažirani sljedeći pružatelji usluga:</p>
           <ul>
             <li>
-              <strong>Formspree</strong> (sa sjedištem u SAD-u) – servis za obradu obrazaca koji
-              zaprima upit s obrasca i prosljeđuje ga prodavatelju e-poštom. Podaci iz upita time se
-              prenose izvan Europskoga gospodarskog prostora (EGP).
-            </li>
-            <li>
-              <strong>Cloudflare</strong> – hosting stranice. Pri isporuci stranice može obrađivati
-              tehničke podatke, primjerice IP adresu, vrijeme pristupa i podatke o pregledniku i
-              uređaju. To nije isto što i slanje upita prodavatelju.
+              <strong>Cloudflare</strong> (Cloudflare, Inc., SAD) – hosting stranice i obrada
+              obrasca za upit. Pri isporuci stranice može obrađivati tehničke podatke, primjerice IP
+              adresu, vrijeme pristupa i podatke o pregledniku i uređaju, a podatke iz obrasca samo
+              prosljeđuje prodavatelju e-poštom. Cloudflare podatke obrađuje kao izvršitelj obrade.
+              Prijenos podataka u SAD temelji se na okviru EU-SAD za privatnost podataka (EU-U.S.
+              Data Privacy Framework), u koji je Cloudflare, Inc. uključen.
             </li>
             <li>
               <strong>Google (Gmail)</strong> – e-pošta prodavatelja, na koju stižu upiti.
@@ -202,16 +201,11 @@
               >.
             </li>
           </ul>
-          <p class="legal-pending">
-            Za Formspree i Cloudflare potrebno je potvrditi ugovor o obradi podataka i pravnu osnovu
-            za prijenos podataka izvan EGP-a (primjerice okvir EU-SAD za privatnost podataka ili
-            standardne ugovorne klauzule) te tu informaciju dopuniti u ovoj politici.
-          </p>
           <h2>Koliko se podaci čuvaju?</h2>
           <ul>
             <li>
-              <strong>Upiti bez kupnje:</strong> dok je potrebno odgovoriti i završiti postupanje po
-              upitu; zatim se brišu, osim ako postoji druga valjana osnova za daljnje čuvanje.
+              <strong>Upiti bez kupnje:</strong> 12 mjeseci od primitka upita, nakon čega se brišu,
+              osim ako postoji druga valjana osnova za daljnje čuvanje.
             </li>
             <li>
               <strong>Podaci o kupnji:</strong> za izvršenje ugovora i tijekom primjenjivih
@@ -224,8 +218,8 @@
               kada je to potrebno za postupak koji još traje ili zakonsku zaštitu prava.
             </li>
             <li>
-              <strong>Podaci kod Formspreea i Cloudflarea:</strong> prema stvarnom opsegu obrade i
-              rokovima tih pružatelja; taj dio treba potvrditi prije javnog početka prodaje.
+              <strong>Tehnički podaci kod Cloudflarea:</strong> prema rokovima i pravilima tog
+              pružatelja. Podaci iz obrasca za upit kod Cloudflarea se ne spremaju.
             </li>
           </ul>
           <p class="legal-pending">
@@ -264,7 +258,7 @@
               >Pročitajte obavijest o kolačićima i tehničkim podacima →</a
             >
           </p>
-          <p class="legal-version">Ažurirano: 10. studenoga 2026.</p>
+          <p class="legal-version">Ažurirano: 12. studenoga 2026.</p>
         </article>
       </div>
     </main>
@@ -304,13 +298,14 @@
       <p class="eyebrow">VAŠ UPIT</p>
       <h2 id="privacy-title">O privatnosti</h2>
       <p>
-        Podatke koje upišete u obrazac (ime i prezime, e-adresa, odabrani proizvod i poruka) šaljemo
-        putem vanjskog servisa za obradu obrazaca isključivo radi odgovora na vaš upit.
+        Podatke koje upišete u obrazac (ime i prezime, e-adresa, odabrani proizvodi i poruka)
+        prosljeđujemo e-poštom preko pružatelja hostinga Cloudflare, isključivo radi odgovora na vaš
+        upit. Stranica ih ne sprema.
       </p>
       <p>
-        Podaci se ne koriste u druge svrhe i ne prosljeđuju trećima, osim navedenom servisu koji
-        tehnički omogućuje dostavu poruke. Za početni upit nije potrebno slati djetetovo ime, školu
-        ili osjetljive podatke.
+        Podaci se ne koriste u druge svrhe i ne prosljeđuju trećima, osim pružateljima koji tehnički
+        omogućuju dostavu poruke (Cloudflare i Gmail). Za početni upit nije potrebno slati djetetovo
+        ime, školu ili osjetljive podatke.
       </p>
       <a class="text-link" href="mailto:mirela.vlasic@gmail.com">Kontakt za pitanja o podacima</a>
       <p>
