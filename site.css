@@ -491,3 +491,19 @@
     animation: none;
   }
 }
+
+/* Sporedni gumb (npr. "Istražite setove"): prozirna pozadina i obrub kao
+   gumb "Naruči" u izborniku */
+.button.button-outline {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid #ae96a6;
+}
+.button.button-outline:hover {
+  background: #f1ebf2;
+  color: var(--plum-dark);
+}
+.button.button-outline span {
+  font-size: 18px;
+  line-height: 1;
+}
