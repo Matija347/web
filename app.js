@@ -69,6 +69,22 @@ if (menuToggle && navigation) {
 /* --------------------------------------------------------------------
    "Odakle krenuti?" (finder)
 -------------------------------------------------------------------- */
+const finderResult = document.querySelector('.finder-result');
+const finderOptions = document.querySelector('.finder-options');
+// Na užim ekranima (opcije jedna ispod druge) preporuka se prikazuje odmah
+// ispod odabrane opcije, da se vidi što se promijenilo; na širim desno.
+const finderStacked = matchMedia('(max-width: 680px)');
+
+function placeFinderResult() {
+  if (!finderResult || !finderOptions) return;
+  const selected = finderOptions.querySelector('[data-need].selected');
+  if (finderStacked.matches && selected) {
+    if (selected.nextElementSibling !== finderResult) selected.after(finderResult);
+  } else if (finderOptions.nextElementSibling !== finderResult) {
+    finderOptions.after(finderResult);
+  }
+}
+
 document.querySelectorAll('[data-need]').forEach((button) =>
   button.addEventListener('click', () => {
     const item = products[button.dataset.need];
@@ -87,8 +103,13 @@ document.querySelectorAll('[data-need]').forEach((button) =>
     if (description) description.textContent = item.description;
     if (icon) icon.setAttribute('href', '#' + item.icon);
     if (cta) cta.href = item.url;
+
+    placeFinderResult();
   }),
 );
+
+placeFinderResult();
+finderStacked.addEventListener('change', placeFinderResult);
 
 /* --------------------------------------------------------------------
    Dijalozi (privatnost, fotografije)

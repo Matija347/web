@@ -469,3 +469,25 @@
 .footer-contact {
   gap: 2px;
 }
+
+/* "Odakle krenuti?" na mobitelu: preporuka odmah ispod odabrane opcije */
+@media (max-width: 680px) {
+  .finder-options .finder-result {
+    min-height: 0;
+    margin: 0 0 14px;
+    border-radius: 0 0 5px 5px;
+    box-shadow: inset 3px 0 var(--plum);
+    animation: finder-reveal 0.25s ease-out;
+  }
+}
+@keyframes finder-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .finder-options .finder-result {
+    animation: none;
+  }
+}
