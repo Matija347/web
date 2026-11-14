@@ -166,8 +166,8 @@ function reply(wantsJson, status, message) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${ok ? 'Upit je poslan' : 'Upit nije poslan'} — Mozgić</title>
 <link rel="stylesheet" href="/styles.css"></head>
-<body><main class="wrap section"><h1>${ok ? 'Hvala! Upit je poslan.' : 'Upit nije poslan.'}</h1>
-<p>${ok ? 'Javljam vam se uskoro.' : escapeHtml(message) + ' Pokušajte ponovno ili pišite na mirela.vlasic@gmail.com.'}</p>
+<body><main class="wrap section"><h1>${ok ? 'Hvala Vam na javljanju!' : 'Upit nije poslan.'}</h1>
+<p>${ok ? 'Vaš je upit zaprimljen. Ponudu i/ili odgovor na pitanje dobit ćete e-poštom u roku od jednog radnog dana.' : escapeHtml(message) + ' Pokušajte ponovno ili pišite na mirela.vlasic@gmail.com.'}</p>
 <p><a class="text-link" href="/">Natrag na početnu</a></p></main></body></html>`;
   return new Response(html, { status, headers: { 'Content-Type': 'text/html; charset=utf-8' } });
 }

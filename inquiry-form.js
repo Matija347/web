@@ -52,7 +52,8 @@
   const MESSAGES = {
     noProduct: 'Odaberite barem jedan proizvod.',
     sending: 'Šaljem upit…',
-    success: 'Hvala! Upit je poslan. Javljam vam se uskoro.',
+    success:
+      'Hvala Vam na javljanju! Vaš je upit zaprimljen. Ponudu i/ili odgovor na pitanje dobit ćete e-poštom u roku od jednog radnog dana.',
     error: `Nešto nije prošlo kod slanja. Pokušajte ponovno ili pišite na ${CONTACT_EMAIL}.`,
     offline: 'Nema veze sa serverom. Provjerite internet i pokušajte ponovno.',
   };

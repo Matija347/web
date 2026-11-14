@@ -486,10 +486,6 @@ em {
 .finder-options button:first-child {
   border-top: 1px solid var(--line);
 }
-.finder-options button > span:last-child {
-  font-size: 23.3px;
-  color: var(--plum);
-}
 .finder-options button.selected {
   background: #eee7ee;
   border-color: transparent;
