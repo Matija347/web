@@ -507,3 +507,16 @@
   font-size: 18px;
   line-height: 1;
 }
+
+/* "Odakle krenuti?": strelica udesno u svakoj opciji */
+.finder-options button svg {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  color: var(--plum);
+  transition: transform 0.2s;
+}
+.finder-options button:hover svg,
+.finder-options button.selected svg {
+  transform: translateX(3px);
+}
