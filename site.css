@@ -520,3 +520,11 @@
 .finder-options button.selected svg {
   transform: translateX(3px);
 }
+
+/* Obrazac: mali pomoćni tekst ispod polja (npr. adresa za dostavu) */
+.inquiry .field-hint {
+  margin: -8px 0 18px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+}

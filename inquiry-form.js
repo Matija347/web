@@ -125,6 +125,21 @@
         <label for="email">E-adresa</label>
         <input type="email" id="email" name="email" autocomplete="email" required />
 
+        <label for="delivery-address">
+          Adresa za dostavu <span>(neobvezno)</span>
+        </label>
+        <textarea
+          id="delivery-address"
+          name="adresa"
+          maxlength="300"
+          rows="2"
+          autocomplete="street-address"
+          aria-describedby="delivery-address-hint"
+        ></textarea>
+        <p class="field-hint" id="delivery-address-hint">
+          Ako želite ponudu za kupnju, upišite adresu na koju želite primiti proizvode.
+        </p>
+
         <label for="inquiry-message">
           Što biste još željeli pitati? <span>(neobvezno)</span>
         </label>
@@ -138,7 +153,7 @@
 
         <div class="inquiry-summary">
           <span data-summary-label>Odaberite jedan ili više proizvoda</span>
-          <strong data-summary-price>—</strong>
+          <strong data-summary-price></strong>
         </div>
         <p class="shipping-note">Trošak dostave potvrđuje se u ponudi.</p>
 
@@ -153,7 +168,8 @@
         />
 
         <p class="form-legal-note">
-          Slanje upita ne obvezuje vas na kupnju. Pročitajte
+          Slanje upita i unos podataka ne obvezuju Vas na kupnju. Ponudu prihvaćate tek
+          plaćanjem prema dostavljenoj ponudi. Pročitajte
           <a href="/pravni-kutak/uvjeti-kupnje/">uvjete kupnje</a> i
           <a href="/pravni-kutak/privatnost/">politiku privatnosti</a>.
         </p>
@@ -239,7 +255,8 @@
         : 'Odaberite jedan ili više proizvoda';
 
       const total = selected.reduce((sum, v) => sum + ((byValue[v] && byValue[v].price) || 0), 0);
-      this.priceEl.textContent = total > 0 ? formatPrice(total) : '—';
+      // Bez odabranog proizvoda cijena se ne prikazuje (prije je stajala crtica "—")
+      this.priceEl.textContent = total > 0 ? formatPrice(total) : '';
     }
 
     setStatus(text) {
