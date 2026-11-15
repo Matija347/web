@@ -21,7 +21,7 @@ const PRODUCTS = {
   kartice: 'Aktivno prisjećanje — 29,90 €',
 };
 
-const LIMITS = { name: 200, email: 254, message: 2000 };
+const LIMITS = { name: 200, email: 254, address: 300, message: 2000 };
 const SUBJECT = 'Novi upit s web stranice — Mozgić';
 
 export default {
@@ -61,10 +61,8 @@ async function handleInquiry(request, env) {
 
   const name = clean(form.get('ime'), LIMITS.name);
   const email = clean(form.get('email'), LIMITS.email);
-  const message = String(form.get('poruka') || '')
-    .replace(/\r\n?/g, '\n')
-    .trim()
-    .slice(0, LIMITS.message);
+  const address = multiline(form.get('adresa'), LIMITS.address);
+  const message = multiline(form.get('poruka'), LIMITS.message);
   const products = [...new Set(form.getAll('proizvod').map(String))].filter((p) => p in PRODUCTS);
 
   if (!name) return reply(wantsJson, 400, 'Upišite ime i prezime.');
@@ -76,6 +74,9 @@ async function handleInquiry(request, env) {
     '',
     `Ime i prezime: ${name}`,
     `E-adresa: ${email}`,
+    '',
+    'Adresa za dostavu:',
+    address || '(nije navedena)',
     '',
     'Odabrani proizvodi:',
     ...products.map((p) => `- ${PRODUCTS[p]}`),
@@ -113,6 +114,14 @@ async function handleInquiry(request, env) {
 
 async function send(env, from, to, raw) {
   await env.UPIT_EMAIL.send(new EmailMessage(from, to, raw));
+}
+
+/* Višeredni tekst (adresa, poruka): ujednačeni prijelomi redova, ograničena duljina */
+function multiline(value, max) {
+  return String(value || '')
+    .replace(/\r\n?/g, '\n')
+    .trim()
+    .slice(0, max);
 }
 
 /* Jedan red teksta bez znakova za novi red (sprječava ubacivanje zaglavlja) */
