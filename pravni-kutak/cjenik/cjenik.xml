@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Cjenik>
+	<Zaglavlje>
+		<OblikProdajnogObjekta>Poslovnica</OblikProdajnogObjekta>
+		<AdresaProdajnogObjekta>Ulica fra Fortunata Pintarića 32</AdresaProdajnogObjekta>
+		<OznakaProdajnogMjesta>P1</OznakaProdajnogMjesta>
+		<BrojPohrane>01</BrojPohrane>
+		<VremenskaOznaka>16.11.2026T22:00:05</VremenskaOznaka>
+	</Zaglavlje>
+	<Usluge>
+		<Usluga>
+			<Sifra>Citanje</Sifra>
+			<Naziv>Set Aktivno čitanje (Vodič + Mozgićeve kartica za učenje)</Naziv>
+			<JedinicnaMjera>kom</JedinicnaMjera>
+			<TrenutnaCijena>29.90</TrenutnaCijena>
+			<PosebanOblikProdaje>NE</PosebanOblikProdaje>
+			<NazivPosebnogOblikaProdaje></NazivPosebnogOblikaProdaje>
+			<BaznaCijena>29.90</BaznaCijena>
+			<DatumBazneCijene>2026-11-12</DatumBazneCijene>
+		</Usluga>
+		<Usluga>
+			<Sifra>Komplet</Sifra>
+			<Naziv>Komplet Mozgićevih kartica za učenje (4 seta vodič + Mozgićeve kartice za učenje)</Naziv>
+			<JedinicnaMjera>kom</JedinicnaMjera>
+			<TrenutnaCijena>89.90</TrenutnaCijena>
+			<PosebanOblikProdaje>NE</PosebanOblikProdaje>
+			<NazivPosebnogOblikaProdaje></NazivPosebnogOblikaProdaje>
+			<BaznaCijena>89.90</BaznaCijena>
+			<DatumBazneCijene>2026-11-12</DatumBazneCijene>
+		</Usluga>
+		<Usluga>
+			<Sifra>Mape</Sifra>
+			<Naziv>Set Mentalne mape (Vodič + Mozgićeve kartica za učenje)</Naziv>
+			<JedinicnaMjera>kom</JedinicnaMjera>
+			<TrenutnaCijena>29.90</TrenutnaCijena>
+			<PosebanOblikProdaje>NE</PosebanOblikProdaje>
+			<NazivPosebnogOblikaProdaje></NazivPosebnogOblikaProdaje>
+			<BaznaCijena>29.90</BaznaCijena>
+			<DatumBazneCijene>2026-11-12</DatumBazneCijene>
+		</Usluga>
+		<Usluga>
+			<Sifra>Planiranje</Sifra>
+			<Naziv>Set Planiranje (Vodič + Mozgićeve kartica za učenje)</Naziv>
+			<JedinicnaMjera>kom</JedinicnaMjera>
+			<TrenutnaCijena>29.90</TrenutnaCijena>
+			<PosebanOblikProdaje>NE</PosebanOblikProdaje>
+			<NazivPosebnogOblikaProdaje></NazivPosebnogOblikaProdaje>
+			<BaznaCijena>29.90</BaznaCijena>
+			<DatumBazneCijene>2026-11-12</DatumBazneCijene>
+		</Usluga>
+		<Usluga>
+			<Sifra>Prisjecanje</Sifra>
+			<Naziv>Set Aktivno prisjećanje (Vodič + Mozgićeve kartica za učenje)</Naziv>
+			<JedinicnaMjera>kom</JedinicnaMjera>
+			<TrenutnaCijena>29.90</TrenutnaCijena>
+			<PosebanOblikProdaje>NE</PosebanOblikProdaje>
+			<NazivPosebnogOblikaProdaje></NazivPosebnogOblikaProdaje>
+			<BaznaCijena>29.90</BaznaCijena>
+			<DatumBazneCijene>2026-11-12</DatumBazneCijene>
+		</Usluga>
+		<Usluga>
+			<Sifra>Dostava</Sifra>
+			<Naziv>Dostava</Naziv>
+			<JedinicnaMjera>kom</JedinicnaMjera>
+			<TrenutnaCijena>6.00</TrenutnaCijena>
+			<PosebanOblikProdaje>NE</PosebanOblikProdaje>
+			<NazivPosebnogOblikaProdaje></NazivPosebnogOblikaProdaje>
+			<BaznaCijena>6.00</BaznaCijena>
+			<DatumBazneCijene>2026-11-12</DatumBazneCijene>
+		</Usluga>
+	</Usluge>
+</Cjenik>

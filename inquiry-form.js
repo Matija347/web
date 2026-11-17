@@ -156,6 +156,9 @@
           <strong data-summary-price></strong>
         </div>
         <p class="shipping-note">Trošak dostave potvrđuje se u ponudi.</p>
+        <p class="shipping-note base-price">
+          Bazna cijena na dan 12.11.2026.: 29,90 eura po setu, 89,90 eura za komplet.
+        </p>
 
         <!-- Anti-spam: skriveno od ljudi; ako ga bot ispuni, Worker ne šalje poruku -->
         <input

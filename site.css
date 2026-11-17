@@ -528,3 +528,72 @@
   line-height: 1.5;
   color: var(--muted);
 }
+
+/* Bazna cijena (sidrena cijena) uz istaknutu cijenu */
+.base-price {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+/* Cjenik: tablica (na mobitelu se tablica pomiče vodoravno unutar okvira) */
+.price-table-wrap {
+  overflow-x: auto;
+  margin: 24px 0 32px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+.price-table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.price-table th,
+.price-table td {
+  padding: 12px 14px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--line);
+}
+.price-table thead th {
+  background: #f1ebf2;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.price-table tbody th {
+  font-weight: 400;
+}
+.price-table tbody tr:last-child > * {
+  border-bottom: 0;
+}
+.price-table .num {
+  text-align: right;
+  white-space: nowrap;
+}
+.price-downloads {
+  padding-left: 20px;
+}
+.price-downloads li {
+  margin: 6px 0;
+}
+
+/* Plaćanje i dostava: bazna cijena u zasebnom retku ispod cijene */
+.legal-price-list p {
+  flex-wrap: wrap;
+  row-gap: 0;
+}
+.legal-price-list .base-price {
+  flex-basis: 100%;
+  margin-top: 2px;
+  text-align: right;
+}
+@media (max-width: 680px) {
+  .legal-price-list .base-price {
+    text-align: left;
+  }
+}
