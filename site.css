@@ -597,3 +597,30 @@
     text-align: left;
   }
 }
+
+/* Početna, kartice setova: cijena i bazna cijena iznad gumba */
+.product-copy .set-price {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: auto 0 18px;
+  color: var(--plum-dark);
+}
+.product-copy .set-price strong {
+  font: 400 30px/1.2 var(--serif);
+}
+.product-copy .set-price .base-price {
+  margin-top: 0;
+  color: var(--muted);
+  opacity: 1;
+}
+.product-copy .set-price + .product-button {
+  margin-top: 0;
+}
+/* Komplet: cijena odmah iznad gumba, kao u karticama setova */
+.product.komplet .komplet-price {
+  margin-top: auto;
+}
+.product.komplet .komplet-price + .product-button {
+  margin-top: 0;
+}
