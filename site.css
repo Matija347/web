@@ -679,3 +679,26 @@ main > .mozgic-section:first-child {
     font-size: 20px;
   }
 }
+
+/* Izbornik: na srednjim širinama skriva se "Kako funkcionira" (a ne prva
+   stavka, koja je sada "Setovi i komplet") */
+@media (min-width: 681px) and (max-width: 900px) {
+  .site-header nav a:first-child {
+    display: inline;
+  }
+  .site-header nav a[href$='#pristup'] {
+    display: none;
+  }
+}
+
+/* Tekst iz bivšeg hero dijela, ispod popisa sa kvačicama */
+.mozgic-intro {
+  margin: 0 0 36px;
+}
+.mozgic-intro .hero-description,
+.mozgic-intro .hero-support {
+  max-width: 720px;
+}
+.mozgic-intro .hero-support {
+  margin-bottom: 0;
+}
