@@ -624,3 +624,55 @@
 .product.komplet .komplet-price + .product-button {
   margin-top: 0;
 }
+
+/* --------------------------------------------------------------------
+   Početna bez hero dijela: "Upoznajte Mozgića" je na vrhu stranice,
+   naslov je h1 (isti izgled kao dosadašnji h2)
+-------------------------------------------------------------------- */
+.section-top h1 {
+  font-size: clamp(37.1px, 4.3vw, 59.7px);
+  margin-bottom: 0;
+}
+@media (max-width: 680px) {
+  .section-top h1 {
+    font-size: 43.3px;
+  }
+}
+
+/* Traka "Učiti kako učiti…" unutar sekcije, ispod popisa sa kvačicama */
+.intro-strip--inline {
+  margin: -14px 0 38px;
+  border: 1px solid #e4dbe4;
+  border-radius: 8px;
+}
+.intro-strip--inline .strip-inner {
+  padding: 20px 26px;
+}
+@media (max-width: 900px) {
+  .intro-strip--inline .strip-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+@media (max-width: 680px) {
+  .intro-strip--inline {
+    margin: -8px 0 30px;
+  }
+  .intro-strip--inline .strip-inner {
+    padding: 18px 20px;
+  }
+}
+
+/* "Upoznajte Mozgića" je prva sekcija: manji razmak ispod zaglavlja */
+main > .mozgic-section:first-child {
+  padding-top: 64px;
+}
+@media (max-width: 680px) {
+  main > .mozgic-section:first-child {
+    padding-top: 40px;
+  }
+  .intro-strip--inline .strip-inner p {
+    text-align: left;
+  }
+}
