@@ -690,15 +690,3 @@ main > .mozgic-section:first-child {
     display: none;
   }
 }
-
-/* Tekst iz bivšeg hero dijela, ispod popisa sa kvačicama */
-.mozgic-intro {
-  margin: 0 0 36px;
-}
-.mozgic-intro .hero-description,
-.mozgic-intro .hero-support {
-  max-width: 720px;
-}
-.mozgic-intro .hero-support {
-  margin-bottom: 0;
-}
