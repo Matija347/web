@@ -639,31 +639,6 @@
   }
 }
 
-/* Traka "Učiti kako učiti…" unutar sekcije, ispod popisa sa kvačicama */
-.intro-strip--inline {
-  margin: -14px 0 38px;
-  border: 1px solid #e4dbe4;
-  border-radius: 8px;
-}
-.intro-strip--inline .strip-inner {
-  padding: 20px 26px;
-}
-@media (max-width: 900px) {
-  .intro-strip--inline .strip-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-}
-@media (max-width: 680px) {
-  .intro-strip--inline {
-    margin: -8px 0 30px;
-  }
-  .intro-strip--inline .strip-inner {
-    padding: 18px 20px;
-  }
-}
-
 /* "Upoznajte Mozgića" je prva sekcija: manji razmak ispod zaglavlja */
 main > .mozgic-section:first-child {
   padding-top: 64px;
@@ -672,7 +647,35 @@ main > .mozgic-section:first-child {
   main > .mozgic-section:first-child {
     padding-top: 40px;
   }
-  .intro-strip--inline .strip-inner p {
-    text-align: left;
+}
+
+/* "Upoznajte Mozgića": naslov i opis jedan ispod drugog (i na računalu) */
+.mozgic-section .section-top {
+  grid-template-columns: 1fr;
+  gap: 22px;
+  align-items: start;
+  margin-bottom: 26px;
+}
+.mozgic-section .section-top > p {
+  max-width: 720px;
+}
+
+/* Redak "Učiti kako učiti…" iznad popisa sa kvačicama (bez okvira) */
+.mozgic-tagline {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 22.3px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.mozgic-tagline em {
+  color: var(--plum);
+}
+.mozgic-section .mozgic-tagline + .product-meta {
+  margin-top: 20px;
+}
+@media (max-width: 680px) {
+  .mozgic-tagline {
+    font-size: 20px;
   }
 }
