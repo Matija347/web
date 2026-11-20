@@ -719,8 +719,3 @@ main > .mozgic-section:first-child {
 .mozgic-hero-photo .gallery-stage {
   border-radius: 10px;
 }
-@media (min-width: 681px) {
-  .mozgic-hero-photo .gallery-caption {
-    justify-content: center;
-  }
-}
