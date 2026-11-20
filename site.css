@@ -709,3 +709,18 @@ main > .mozgic-section:first-child {
     justify-content: center;
   }
 }
+
+/* Prva sekcija: naslov "Mozgićeve kartice za učenje." i fotografija kompleta */
+.mozgic-hero-photo {
+  width: 100%;
+  max-width: 920px;
+  margin: 6px 0 4px;
+}
+.mozgic-hero-photo .gallery-stage {
+  border-radius: 10px;
+}
+@media (min-width: 681px) {
+  .mozgic-hero-photo .gallery-caption {
+    justify-content: center;
+  }
+}
